@@ -1,0 +1,10 @@
+format: jb-book
+root: intro.md
+parts:
+  - caption: Contents
+    chapters:
+    - file: reliability-component/overview.md
+      sections:
+      - file: reliability-component/contamination.ipynb
+    - file: references.md
+    - file: credits.md
