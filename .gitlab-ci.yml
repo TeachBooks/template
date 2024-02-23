@@ -53,7 +53,7 @@ deploy-book:
     - docker stop $CI_PROJECT_NAME || exit_code=$?
     - if [ $exit_code -ne 0 ]; then echo "Container not found, cannot stop"; else docker rm $CI_PROJECT_NAME; fi
   script:
-    - docker run -d --restart always -p 8019:8000 --name $CI_PROJECT_NAME $TAG_LATEST # Make sure to use a different port for each book!
+    - docker run -d --restart always -p 8021:8000 --name $CI_PROJECT_NAME $TAG_LATEST # Make sure to use a different port for each book!
   environment:
     name: production
     url: https://interactivetextbooks.citg.tudelft.nl/$CI_PROJECT_NAME
@@ -69,7 +69,7 @@ deploy-draft:
     - docker stop $CI_PROJECT_NAME-draft || exit_code=$?
     - if [ $exit_code -ne 0 ]; then echo "Container not found, cannot stop"; else docker rm $CI_PROJECT_NAME-draft; fi
   script:
-    - docker run -d --restart always -p 8020:8000 --name $CI_PROJECT_NAME-draft $TAG_DRAFT
+    - docker run -d --restart always -p 8022:8000 --name $CI_PROJECT_NAME-draft $TAG_DRAFT
   environment:
     name: draft
     url: https://interactivetextbooks.citg.tudelft.nl/$CI_PROJECT_NAME-draft
