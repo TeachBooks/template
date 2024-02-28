@@ -17,7 +17,7 @@ docutils==0.17.1
 # now list the packages (and the respective url) you wish to download from the GitLab package registry
 
 # toml file is here: https://gitlab.tudelft.nl/interactivetextbooks-citg/extensions/tud-citg-jb-stack/-/blob/main/pyproject.toml?ref_type=heads
---index-url https://__token__:glpat-JduurUdhDczFJzvzZN4G@gitlab.tudelft.nl/api/v4/projects/13957/packages/pypi/simple
+--index-url https://gitlab.tudelft.nl/api/v4/projects/13957/packages/pypi/simple
 citg-jb-stack
 --extra-index-url https://gitlab.tudelft.nl/api/v4/projects/17983/packages/pypi/simple
 jupyterbook_patches ~= 0.1.3
