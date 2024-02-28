@@ -14,29 +14,19 @@ only_build_toc_files: true
 html:
   comments:
     hypothesis: true
-  extra_footer: |
-        © Delft University of Technology, CC BY 4.0
-        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
-          <img alt="Creative Commons License" style="border-width:; width:80px; height:auto; padding-top:0px" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
-        </a>
 
 sphinx:
   config:
-    html_show_copyright: false
+    html_show_copyright: true
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
     thebe_config:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
-    bibtex_reference_style: author_year_round
-    bibtex_default_style: myapastyle
   extra_extensions:
     - sphinx.ext.imgconverter
     - download_link_replacer
     - jupyterbook_patches
-  local_extensions:
-    apastyle: _ext/
-    bracket_citation_style: _ext/
 
 bibtex_bibfiles: 
   - references.bib
