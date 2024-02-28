@@ -1,6 +1,6 @@
 title: Template
-author: Robert Lanzafame
-logo: figures/cover_small.png
+author: Books CEG
+logo: figures/TUDelft_logo_rgb.png
 copyright: Delft University of Technology, CC BY 4.0 # overriden by extra footer/sphinx config
 
 execute:
@@ -11,25 +11,14 @@ launch_buttons:
 
 only_build_toc_files: true
 
-repository:
-  url: https://gitlab.tudelft.nl/interactivetextbooks-citg/risk-and-reliability/
-  branch: main/book # for edit button; need to check branch permissions non-TUD user access
-
 html:
-# X START DRAFT # temporarily enable Hypothesis for published book until Library finishes
   comments:
     hypothesis: true
-# X END DRAFT
-  use_edit_page_button: false
-  use_repository_button: true
   extra_footer: |
-      <p>
         © Delft University of Technology, CC BY 4.0
-        <img src="https://gitlab.tudelft.nl/interactivetextbooks-citg/risk-and-reliability/-/raw/main/book/images/TUDelft_logo_rgb.png?ref_type=heads" width="88px">
         <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
           <img alt="Creative Commons License" style="border-width:; width:80px; height:auto; padding-top:0px" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
         </a>
-      </p>
 
 sphinx:
   config:
@@ -39,20 +28,12 @@ sphinx:
     thebe_config:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
-    # Reference issues
-    # See: https://github.com/executablebooks/jupyter-book/issues/1090
-    # and Milestone 10:
-    # https://gitlab.tudelft.nl/groups/interactivetextbooks-citg/-/milestones/10#tab-issues
-    # This next line was from Caspar/citg-jb-stack and doesn't work (see Issue 24)
-    # https://gitlab.tudelft.nl/interactivetextbooks-citg/risk-and-reliability/-/issues/24
-    # bibtex_reference_style: author_year
     bibtex_reference_style: author_year_round
     bibtex_default_style: myapastyle
   extra_extensions:
     - sphinx.ext.imgconverter
     - download_link_replacer
     - jupyterbook_patches
-  # Local extensions are for bibtex (Thirza's hydrology hack); see above
   local_extensions:
     apastyle: _ext/
     bracket_citation_style: _ext/

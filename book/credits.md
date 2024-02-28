@@ -25,15 +25,6 @@ This book is created using open source tools: it is a Jupyter Book that is writt
 ### Acknowledgements
 
 
----
-
 This book is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png"/></a>
-
-The following items referenced in the text are _not_ included in the license:
-
-{numref}`risk-curve-baecher` and {numref}`risk-curve-baecher-2` are from {cite:t}`baecher2003`, based on {cite:t}`baecher1982` and described in {cite:t}`baecher2021`
-
-{numref}`risk_matrix` is from an online PDF document (located [here](https://home.army.mil/lee/application/files/7815/3809/1878/Tables.pdf)). The formal definition for the risk matrix can be found in Engineering Manual EM 385-1-1 (located [here](https://www.publications.usace.army.mil/portals/76/publications/engineermanuals/em_385-1-1.pdf)).
-
