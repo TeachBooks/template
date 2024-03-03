@@ -11,6 +11,6 @@ Minimal changes should be made to the template book contents itself, to prevent 
 3. To trigger a deployment for the first time, you can go to `Actions` (top panel), then click `deploy-book` on the left, then `Run workflow` on the right. The book is also automatically deployed whenever commits are pushed onto the `main` branch of the repository (in absence of errors).
 
 Voila! You can now access the copy of the template at 
-`https://<username>.github.io/<bookname>` (e.g. `https://teachbooks.github.io/template`).
+`https://<username>.github.io/<bookname>` (e.g. https://teachbooks.github.io/template).
 
 To learn more about how we do this, please see the [GitHub Actions documentation](https://docs.github.com/en/actions) and our deployment pipeline configuration file `.github/workflows/deploy-book-ghpages.yml`.
