@@ -1,22 +1,11 @@
 # first list the packages you wish to download from PyPI
-# sympy
-# jupyterquiz
-# seaborn
-# pytest
-# openpyxl
-# pyvinecopulib
-
-# pyvinecopulib is needed for generating the cover image (cover.ipynb)
-# but not included here to prevent build issues on the server.
-# In Feb 2024 it installed fine with Python 3.11 venv and pip
+jupyter-book
+# numpy
 
 # docutils version for reference page formatting
-# (See JB manual, Issues #21 and #24)
 docutils==0.17.1
 
 # now list the packages (and the respective url) you wish to download from the GitLab package registry
-
-# toml file is here: https://gitlab.tudelft.nl/interactivetextbooks-citg/extensions/tud-citg-jb-stack/-/blob/main/pyproject.toml?ref_type=heads
 --index-url https://gitlab.tudelft.nl/api/v4/projects/13957/packages/pypi/simple
 citg-jb-stack
 --extra-index-url https://gitlab.tudelft.nl/api/v4/projects/17983/packages/pypi/simple
