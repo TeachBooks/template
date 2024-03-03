@@ -3,12 +3,11 @@ name: deploy-book
 # Based on:
 # https://jupyterbook.org/en/stable/publish/gh-pages.html
 
-# Run this when the master or main branch changes, or when dispatched
+# Run on a push to any branch, then deploy books from all branches.
 on:
   push:
     branches:
-    - master
-    - main
+    - '*'
     # If your git repository has the Jupyter Book within some-subfolder next to
     # unrelated files, you can make this run only if a file within that specific
     # folder has been modified.
@@ -17,19 +16,43 @@ on:
     # - some-subfolder/**
   workflow_dispatch:
 
-# This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
-  deploy-book:
+  get-branches:
     runs-on: ubuntu-latest
+    outputs:
+      branches: ${{ steps.set-branches.outputs.branches }}
+    permissions:
+      contents: read
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - id: set-branches
+      name: Collect all remote branch names for the matrix
+      run: |
+        branches=$(git branch -r | sed 's,\s*origin/,,g' | jq -Rn '[inputs]')
+        echo "branches=$(echo $branches)" >> $GITHUB_OUTPUT
+
+  build-books:
+    runs-on: ubuntu-latest
+    needs: get-branches
     permissions:
       pages: write
       id-token: write
+    strategy:
+      # If one branch fails, we may still want to deploy the other
+      fail-fast: false
+      matrix:
+        branch: ${{ fromJson(needs.get-branches.outputs.branches) }}
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout to branch
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ matrix.branch }}
 
     # Install dependencies
     - name: Set up Python 3.11
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: 3.11
 
@@ -37,31 +60,54 @@ jobs:
       run: |
         pip install -r requirements.txt
 
-    # (optional) Cache your executed notebooks between runs
-    # if you have config:
-    # execute:
-    #   execute_notebooks: cache
-    - name: cache executed notebooks
-      uses: actions/cache@v3
-      with:
-        path: _build/.jupyter_cache
-        key: jupyter-book-cache-${{ hashFiles('requirements.txt') }}
-
-    # Build the book
-    - name: Build the book
+    - name: Build the book from branch
       run: |
         jupyter-book build book/
 
-    # Upload the book's HTML as an artifact
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v2
+    - name: Upload the built book HTML as an artifact
+      uses: actions/upload-artifact@v4
       with:
+        name: ${{ matrix.branch }}
         path: "book/_build/html"
 
-    # Deploy the book's HTML to GitHub Pages
+  deploy-books:
+    # Run after build-books, even if it failed
+    if: always()
+    needs: build-books
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    steps:
+    - uses: actions/checkout@v4
+
+    - run: |
+        mkdir final/
+
+    - name: Download all book artifacts
+      uses: actions/download-artifact@v4
+      with:
+        path: "final/"
+
+    - name: Symlink `book` to `main`
+      run: |
+        if test -d final/main; then
+          ln -s main final/book
+        fi
+
+    - name: Load root page to redirect to `book/`
+      run: |
+        cp redirect.html final/index.html
+
+    - name: Upload final Pages artifact
+      uses: actions/upload-pages-artifact@v3
+      with:
+        path: "final/"
+    
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
+
 
 permissions:
   contents: read
