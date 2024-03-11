@@ -1,11 +1,90 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+# format: jb-book
+# root: intro
+# chapters:
+# - file: instructie
+# - file: basisgegevens
+# - file: ontwerp
+# - file: voorbeelden
+
 format: jb-book
-root: intro.md
+root: intro
+options:
+  numbered: 2
 
 parts:
-  - caption: Contents
+  - caption: Practical information
+    numbered: 2
     chapters:
-    - file: some_content/overview.md
+    - file: schedules/schedule
       sections:
-      - file: some_content/text_and_code.ipynb
-    - file: references.md
-    - file: credits.md
+      - file: schedules/phase1
+      - file: schedules/phase2
+      - file: schedules/phase3
+      - file: schedules/phase4
+      - file: schedules/phase5
+    - file: schedules/promotion
+
+  - caption: Instructie
+    numbered: 2
+    chapters:
+    - file: instructions/Veiligheidsfilosofie
+    - file: instructions/Stabiliteit
+    - file: instructions/Ontwerpendraagconstructies
+    - file: instructions/Tekeninstructies
+
+  - caption: Basis gegevens
+    numbered: 2
+    chapters:
+    - file: basics/Mechanica
+    - file: basics/Belastingen/belasting
+      sections:
+      - file: basics/Belastingen/Belastingen_grenstoestanden
+    - file: basics/Materialen/Materialen
+      sections:
+      - file: basics/Materialen/Steel/steel
+        sections:
+        - file: basics/Materialen/Steel/information
+        - file: basics/Materialen/Steel/sectiontables
+
+
+  - caption: Ontwerp
+    numbered: 2
+    chapters:
+    - file: design/Beton/Beton
+      sections:
+      - file: design/Beton/stabiliteit
+      - file: design/Beton/vloeren
+      - file: design/Beton/balken
+      - file: design/Beton/wanden
+      - file: design/Beton/kolommen
+      - file: design/Beton/verbindingen
+    - file: design/Staal/Staal
+      sections:
+      - file: design/Staal/stabiliteit
+      - file: design/Staal/vloeren
+      - file: design/Staal/balken
+      - file: design/Staal/wanden
+      - file: design/Staal/kolommen
+      - file: design/Staal/verbindingen
+    - file: design/Hout/Hout
+      sections:
+      - file: design/Hout/stabiliteit
+      - file: design/Hout/vloeren
+      - file: design/Hout/balken
+      - file: design/Hout/wanden
+      - file: design/Hout/kolommen
+      - file: design/Hout/verbindingen
+
+  - caption: Voorbeelden
+    numbered: 2
+    chapters:
+    - file: examples/hout/hout
+      sections:
+      - file: examples/hout/voorontwerp_houten_hal
+    - file: examples/steel/steel
+      sections:
+      - file: examples/steel/3d
+
