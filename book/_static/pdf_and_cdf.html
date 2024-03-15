@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://unpkg.com/mathjs/lib/browser/math.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>  
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    
+    <style>
+        body{
+          margin: 0; overflow: hidden;
+          font-family: Helvetica, sans-serif;
+        }
+      .my_datavizdiv {
+          position: absolute;
+      }
+      svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: None
+      }
+    </style>
+  </head>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_datavisualization">
+  <svg id="click" xmlns="http://www.w3.org/2000/svg">
+  </svg>
+</div>
+
+
+
+  <body style='overflow:hidden'>
+  
+    
+    <script>
+    
+      // Get the viewport height and width
+      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+      const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+
+      // Fit to viewport
+      var height = vw * 0.5;
+      var width = vw;
+
+      // Create the canvas. We will use only part of it for the main plot
+      var svg = d3.select("#click") // This selects the div
+          .attr("width", width) // This defines the canvas' width
+          .attr("height", height) // This defines the canvas' height
+
+      // Define a subplot for the standard normal
+      const x_limits = [-3, 3];
+      const y_limits_pdf = [0, 1 / math.sqrt(2 * math.pi) * 1.2];
+
+      const window_x_pdf = [width * 0.1, width * 0.5];
+      const window_y_pdf = [height * 0.1, height * 0.89];
+
+      // Get scaling functions for the x scale and the y_scale
+      const xScale_pdf = d3.scaleLinear()
+          .domain([x_limits[0], x_limits[1]])
+          .range(window_x_pdf)
+      const xScale_pdf_inverse = d3.scaleLinear()
+          .domain(window_x_pdf)
+          .range([x_limits[0], x_limits[1]])
+      const yScale_pdf = d3.scaleLinear()
+          .domain([y_limits_pdf[0], y_limits_pdf[1]])
+          .range([window_y_pdf[1], window_y_pdf[0]])
+
+      // Draw the x axis
+      svg
+          .append("g")
+          .attr("transform", "translate(0," + window_y_pdf[1].toString() + ")")
+          .call(d3.axisBottom(xScale_pdf).ticks(5))
+          .style("font-size", (12 * width / 600).toString() + "px")
+      svg.append("text")
+          .attr("transform",
+              "translate(" + (math.mean(window_x_pdf)).toString() + "," + (height * 0.995).toString() + ")")
+          .style("text-anchor", "middle")
+          .text("x")
+          .style("font-size", (12 * width / 600).toString() + "px")
+
+      // Draw the y axis
+      svg
+          .append("g")
+          .attr("transform", "translate(" + (window_x_pdf[0]).toString() + ",0)")
+          .attr("id", "mainxaxis")
+          .call(d3.axisLeft(yScale_pdf))
+          .style("font-size", (12 * width / 600).toString() + "px");
+      //.call(d3.axisLeft(yScale).tickFormat(""));
+      svg.append("text")
+          .attr("transform",
+              "translate(" + (width * 0.03).toString() + "," + (math.mean(window_y_pdf)).toString() + ") rotate(270)")
+          .style("text-anchor", "middle")
+          .text("probability density")
+          .style("font-size", (12 * width / 600).toString() + "px")
+
+      // Draw the subplot label
+      svg.append("text")
+          .attr("transform",
+              "translate(" + ((window_x_pdf[1] - window_x_pdf[0])/2 + window_x_pdf[0]).toString() + "," + (window_y_pdf[0]).toString() + ")")
+          .style("text-anchor", "middle")
+          .text("pdf")
+          .style("font-size", (16 * width / 600).toString() + "px")
+
+      // Evaluate the normal pdf
+      var x = linspace(-3, 3, 201);
+      var pdf = standard_Gaussian_pdf(x);
+      
+      svg.append("circle")
+          .attr("r", 10 * height / 600)
+          .attr("cx", xScale_pdf(0))
+          .attr("cy", yScale_pdf(standard_Gaussian_pdf([0])))
+          .attr("fill", "#666666") // "#c3e7f9"
+          .attr("stroke-width", 5 * height / 600)
+          .attr("id", "marker_pdf");
+
+      // Get the data for the path
+      var data_pdf = [];
+      for (i = 0; i < x.length; i++) {
+          data_pdf.push({
+              x: x[i],
+              y: pdf[i]
+          })
+      }
+      
+
+      var valueline_pdf = d3.svg.line()
+          .x(function(d) {
+              return xScale_pdf(d.x);
+          })
+          .y(function(d) {
+              return yScale_pdf(d.y);
+          });
+
+      svg.append("path")
+          .attr("class", "line")
+          .attr("d", valueline_pdf(data_pdf))
+          .attr("fill", "none")
+          .attr("stroke-width", 3 * height / 600)
+          .attr("stroke", "#666666") //"#4794c1")
+          .attr("id", "thatline")
+
+      var fill_x, fill_pdf
+      var xpos = 0;
+      fill_x = linspace(x_limits[0], xpos, 201);
+      fill_pdf = standard_Gaussian_pdf(fill_x);
+      fill_x.push(xpos)
+      fill_x.push(x_limits[0])
+      fill_pdf.push(0)
+      fill_pdf.push(0)
+      var data_fill = [];
+      for (i = 0; i < fill_x.length; i++) {
+          data_fill.push({
+              x: fill_x[i],
+              y: fill_pdf[i]
+          })
+      }
+      svg.append("path")
+          .attr("class", "line")
+          .attr("d", valueline_pdf(data_fill))
+          .attr("fill", "#999999")
+          .attr("stroke", "None") //"#4794c1")
+          .attr("id", "fill")
+          .lower()
+          
+          
+
+
+      // Define a subplot for the standard normal
+      const y_limits_cdf = [0, 1];
+      const window_x_cdf = [width * 0.585, width * 0.985];
+      const window_y_cdf = [height * 0.1, height * 0.89];
+
+      // Get scaling functions for the x scale and the y_scale
+      const xScale_cdf = d3.scaleLinear()
+          .domain([x_limits[0], x_limits[1]])
+          .range(window_x_cdf)
+      const xScale_cdf_inverse = d3.scaleLinear()
+          .domain(window_x_cdf)
+          .range([x_limits[0], x_limits[1]])
+      const yScale_cdf = d3.scaleLinear()
+          .domain([y_limits_cdf[0], y_limits_cdf[1]])
+          .range([window_y_cdf[1], window_y_cdf[0]])
+
+      // Draw the x axis
+      svg
+          .append("g")
+          .attr("transform", "translate(0," + window_y_cdf[1].toString() + ")")
+          .call(d3.axisBottom(xScale_cdf).ticks(5))
+          .style("font-size", (12 * width / 600).toString() + "px")
+      svg.append("text")
+          .attr("transform",
+              "translate(" + (math.mean(window_x_cdf)).toString() + "," + (height * 0.995).toString() + ")")
+          .style("text-anchor", "middle")
+          .text("x")
+          .style("font-family", "arial")
+          .style("font-size", (12 * width / 600).toString() + "px")
+
+      // Draw the y axis
+      svg
+          .append("g")
+          .attr("transform", "translate(" + (window_x_cdf[0]).toString() + ",0)")
+          .attr("id", "mainxaxis")
+          .call(d3.axisLeft(yScale_cdf))
+          .style("font-size", (12 * width / 600).toString() + "px");
+      //.call(d3.axisLeft(yScale).tickFormat(""));
+      svg.append("text")
+          .attr("transform",
+              "translate(" + (width * 0.525).toString() + "," + (math.mean(window_y_cdf)).toString() + ") rotate(270)")
+          .style("text-anchor", "middle")
+          .text("cumulative probability")
+          .style("font-size", (12 * width / 600).toString() + "px")
+
+      // Draw the subplot label
+      svg.append("text")
+          .attr("transform",
+              "translate(" + ((window_x_cdf[1] - window_x_cdf[0])/2 + window_x_cdf[0]).toString() + "," + (window_y_cdf[0]).toString() + ")")
+          .style("text-anchor", "middle")
+          .text("cdf")
+          .style("font-size", (16 * width / 600).toString() + "px")
+
+      // Evaluate the normal pdf
+      var cdf = standard_Gaussian_cdf(x);
+      
+      svg.append("circle")
+          .attr("r", 10 * height / 600)
+          .attr("cx", xScale_cdf(0))
+          .attr("cy", yScale_cdf(standard_Gaussian_cdf([0])))
+          .attr("fill", "#666666") // "#c3e7f9"
+          .attr("stroke-width", 5 * height / 600)
+          .attr("id", "marker_cdf");
+
+      // Get the data for the path
+      var data_cdf = [];
+      for (i = 0; i < x.length; i++) {
+          data_cdf.push({
+              x: x[i],
+              y: cdf[i]
+          })
+      }
+
+      var valueline_cdf = d3.svg.line()
+          .x(function(d) {
+              return xScale_cdf(d.x);
+          })
+          .y(function(d) {
+              return yScale_cdf(d.y);
+          });
+
+      svg.append("path")
+          .attr("class", "line")
+          .attr("d", valueline_cdf(data_cdf))
+          .attr("fill", "none")
+          .attr("stroke-width", 3 * height / 600)
+          .attr("stroke", "#666666") //"#4794c1")
+          .attr("id", "thatline")
+
+      svg.append('line')
+        .attr('x1', window_x_cdf[0])
+        .attr('x2', window_x_cdf[1])
+        .attr('y1', yScale_cdf(standard_Gaussian_cdf([0])))
+        .attr('y2', yScale_cdf(standard_Gaussian_cdf([0])))
+        .attr('stroke', '#000000')
+        .attr("stroke-width", 3 * height / 600)
+        .style("stroke-dasharray", ((10 * height / 600).toString()+","+(5 * height / 600).toString()))  // <== This line here!!
+        .attr("id","line_cdf")
+        .lower();
+        
+
+      // Shift the marker around on mouseover; restrict it to the contour
+      var movex, movey, xpos
+
+      svg
+          .on("mousemove", function() {
+              // Get the current mouseover coordinates
+              movex = d3.event.x;
+              movey = d3.event.y;
+
+              
+              if (movex >= window_x_pdf[0] && movex <= window_x_pdf[1]) {
+              	xpos = xScale_pdf_inverse(movex);
+              
+                d3.select("#marker_pdf")
+                    .attr("cx", xScale_pdf(xpos))
+                    .attr("cy", yScale_pdf(standard_Gaussian_pdf([xpos])));
+                d3.select("#marker_cdf")
+                    .attr("cx", xScale_cdf(xpos))
+                    .attr("cy", yScale_cdf(standard_Gaussian_cdf([xpos])));
+                    
+                fill_x = linspace(x_limits[0], xpos, 201);
+                fill_pdf = standard_Gaussian_pdf(fill_x);
+                fill_x.push(xpos)
+                fill_x.push(x_limits[0])
+                fill_pdf.push(0)
+                fill_pdf.push(0)
+                var data_fill = [];
+                for (i = 0; i < fill_x.length; i++) {
+                    data_fill.push({
+                        x: fill_x[i],
+                        y: fill_pdf[i]
+                    })
+                }
+                d3.select("#fill")
+                    .attr("d", valueline_pdf(data_fill))
+                    .lower();
+                    
+                    
+                d3.select("#line_cdf")
+                  .attr('y1', yScale_cdf(standard_Gaussian_cdf([xpos])))
+                  .attr('y2', yScale_cdf(standard_Gaussian_cdf([xpos])))
+                  .lower();
+                
+              } else if (movex >= window_x_cdf[0] && movex <= window_x_cdf[1]) {
+              	xpos = xScale_cdf_inverse(movex);
+                d3.select("#marker_pdf")
+                    .attr("cx", xScale_pdf(xpos))
+                    .attr("cy", yScale_pdf(standard_Gaussian_pdf([xpos])));
+                d3.select("#marker_cdf")
+                    .attr("cx", xScale_cdf(xpos))
+                    .attr("cy", yScale_cdf(standard_Gaussian_cdf([xpos])));
+                    
+                fill_x = linspace(x_limits[0], xpos, 201);
+                fill_pdf = standard_Gaussian_pdf(fill_x);
+                fill_x.push(xpos)
+                fill_x.push(x_limits[0])
+                fill_pdf.push(0)
+                fill_pdf.push(0)
+                var data_fill = [];
+                for (i = 0; i < fill_x.length; i++) {
+                    data_fill.push({
+                        x: fill_x[i],
+                        y: fill_pdf[i]
+                    })
+                }
+                d3.select("#fill")
+                    .attr("d", valueline_pdf(data_fill))
+                d3.select("#fill_cdf")
+                  .attr('y', yScale_cdf(standard_Gaussian_cdf([xpos])))
+                  .attr('height', window_y_cdf[1] - yScale_cdf(standard_Gaussian_cdf([xpos])))
+                  .lower();
+                  
+                d3.select("#line_cdf")
+                  .attr('y1', yScale_cdf(standard_Gaussian_cdf([xpos])))
+                  .attr('y2', yScale_cdf(standard_Gaussian_cdf([xpos])))
+                  .lower();
+                    
+              }
+
+							/*
+
+
+              if (movex < 0.05 * width) {
+                  movex = 0.05 * width;
+              } else if (movex > width * 0.95) {
+                  movex = width * 0.95;
+              }
+              if (movey > 0.95 * height) {
+                  movey = 0.95 * height;
+              } else if (movey < height * 0.05) {
+                  movey = height * 0.05;
+              }
+              // Shift the point to this position
+
+
+              obslikeli = likelihood(
+                  y = [obs],
+                  x = xScale_inverse(movex),
+                  std = obs_sd)
+
+              d3.select("#point1")
+                  .attr("x", movex)
+                  .attr("y", yScale(obslikeli));
+
+              d3.select("#obsdot")
+                  .attr("cy", yScale(obslikeli))
+                  .attr("fill", color(obslikeli));
+
+              d3.select("#vline")
+                  .attr("y2", yScale(obslikeli))
+                  .attr("stroke", color(obslikeli))
+
+              likeli = likelihood(
+                  y = conc,
+                  x = xScale_inverse(movex),
+                  std = obs_sd)
+
+              for (i = 0; i < data.length; i++) {
+                  data[i].y = likeli[i]
+              }
+
+              // Select the section we want to apply our changes to
+              // Make the changes
+              d3.select("#thatline") // change the line
+                  .attr("d", valueline(data))
+                  .attr("stroke", color(obslikeli))
+                  
+              */
+
+          });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			/*
+
+
+      // Add a realization of the marker
+      svg.append("use")
+          .attr("href", "#pointer")
+          .attr("x", xScale(obs))
+          .attr("y", yScale(obslikeli))
+          .attr("fill", "none") // "#c3e7f9"
+          .attr("stroke-width", 0)
+          .attr("id", "point1");
+
+      svg.append("circle")
+          .attr("r", 10 * height / 600)
+          .attr("cx", xScale(obs))
+          .attr("cy", yScale(obslikeli))
+          .attr("fill", color(obslikeli)) // "#c3e7f9"
+          .attr("stroke-width", 5 * height / 600)
+          .attr("id", "obsdot");
+
+      // Add the x coordinate tracker
+      svg
+          .append('line')
+          .attr('x1', xScale(obs))
+          .attr('y1', yScale(y_limits[0]))
+          .attr('x2', xScale(obs))
+          .attr('y2', yScale(obslikeli))
+          .attr("stroke-width", 2 * height / 600)
+          .attr("stroke", color(obslikeli))
+          .attr("id", "vline");
+
+      var valueline = d3.svg.line()
+          .x(function(d) {
+              return xScale(d.x);
+          })
+          .y(function(d) {
+              return yScale(d.y);
+          });
+
+      svg.append("path")
+          .attr("class", "line")
+          .attr("d", valueline(data))
+          .attr("fill", "none")
+          .attr("stroke-width", 3 * height / 600)
+          .attr("stroke", color(obslikeli)) //"#4794c1")
+          .attr("id", "thatline")
+
+
+      // Shift the marker around on mouseover; restrict it to the contour
+      var movex
+      var movey
+
+      svg
+          .on("mousemove", function() {
+              // Get the current mouseover coordinates
+              movex = d3.event.x;
+              movey = d3.event.y;
+
+              if (movex < 0.05 * width) {
+                  movex = 0.05 * width;
+              } else if (movex > width * 0.95) {
+                  movex = width * 0.95;
+              }
+              if (movey > 0.95 * height) {
+                  movey = 0.95 * height;
+              } else if (movey < height * 0.05) {
+                  movey = height * 0.05;
+              }
+              // Shift the point to this position
+
+              obslikeli = likelihood(
+                  y = [obs],
+                  x = xScale_inverse(movex),
+                  std = obs_sd)
+
+              d3.select("#point1")
+                  .attr("x", movex)
+                  .attr("y", yScale(obslikeli));
+
+              d3.select("#obsdot")
+                  .attr("cy", yScale(obslikeli))
+                  .attr("fill", color(obslikeli));
+
+              d3.select("#vline")
+                  .attr("y2", yScale(obslikeli))
+                  .attr("stroke", color(obslikeli))
+
+              likeli = likelihood(
+                  y = conc,
+                  x = xScale_inverse(movex),
+                  std = obs_sd)
+
+              for (i = 0; i < data.length; i++) {
+                  data[i].y = likeli[i]
+              }
+
+              // Select the section we want to apply our changes to
+              // Make the changes
+              d3.select("#thatline") // change the line
+                  .attr("d", valueline(data))
+                  .attr("stroke", color(obslikeli))
+
+          });
+
+
+			*/
+
+
+      // ============================================================
+      // Helper function: Linspace
+      // ============================================================
+      function linspace(start, end, resolution) {
+          var spacing = [];
+          // Go through a for-loop
+          var i;
+          for (i = 0; i < resolution; i++) {
+              spacing.push(start + (end - start) * i / (resolution - 1))
+          }
+          return spacing; // The function returns the linspace between p1 and p2
+      }
+
+      function standard_Gaussian_pdf(x) {
+          mean = 0;
+          std = 1;
+          // Create a dummy variable
+          var result = [];
+          normalize = math.dotDivide(
+              1,
+              math.sqrt(
+                  math.dotMultiply(
+                      math.dotMultiply(
+                          2,
+                          math.PI),
+                      math.pow(
+                          std,
+                          2))));
+
+          var i;
+          for (i = 0; i < x.length; i++) {
+              // Evaluate the first element of the Gaussian mixture
+              expon = math.exp(
+                  -math.dotDivide(
+                      math.pow(
+                          x[i] - mean,
+                          2),
+                      math.dotMultiply(
+                          2,
+                          math.pow(
+                              std,
+                              2))))
+              temp = math.dotMultiply(
+                  normalize,
+                  expon)
+              result.push(temp)
+          }
+          return result
+      }
+      
+			function standard_Gaussian_cdf(x) {
+          mean = 0;
+          std = 1;
+          // Create a dummy variable
+          var result = [];
+          for (i = 0; i < x.length; i++) {
+              // Evaluate the first element of the Gaussian mixture
+              temp = 0.5 * (1 + math.erf(x[i] /math.sqrt(2)))
+              result.push(temp)
+          }
+          return result
+      }
+      
+  
+    </script>
+  </body>
+
+</html>
