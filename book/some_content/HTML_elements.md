@@ -6,4 +6,4 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 Now create another one where we try percentages
 
-<iframe src="../_static/pdf_and_cdf.html" width="100%" height="50vw" frameborder="0"></iframe>
+<iframe src="../_static/pdf_and_cdf.html" width="100%" height="100%" frameborder="0"></iframe>
