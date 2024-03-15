@@ -5,6 +5,8 @@ _Write book intro here. This is the first page the student will see when opening
 
 This book can be used to fork other books. It includes all software developed by the CEG interactive books initiative and make it easier to keep various software in those other books up to date.
 
+Blorb
+
 ---
 
 This book is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
