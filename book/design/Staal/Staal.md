@@ -1,4 +1,4 @@
-# Staal
+# Steel
 
 This chapter contains the following sections:
 
