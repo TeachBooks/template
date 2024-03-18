@@ -1,14 +1,6 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
 
-# format: jb-book
-# root: intro
-# chapters:
-# - file: instructie
-# - file: basisgegevens
-# - file: ontwerp
-# - file: voorbeelden
-
 format: jb-book
 root: intro
 options:
@@ -27,30 +19,65 @@ parts:
       - file: schedules/phase5
     - file: schedules/promotion
 
-  - caption: Instructie
+  - caption: Design Workflow
     numbered: 2
     chapters:
-    - file: instructions/Veiligheidsfilosofie
-    - file: instructions/Stabiliteit
-    - file: instructions/Ontwerpendraagconstructies
-    - file: instructions/Tekeninstructies
+    - file: design_workflow/general_design_guide
+    - file: design_workflow/general_loads/general_loads
+      sections:
+      - file: design_workflow/general_loads/loads_limit_states
+      - file: design_workflow/general_loads/permanent_loads
+      - file: design_workflow/general_loads/variable_loads_1_buildings
+      - file: design_workflow/general_loads/variable_loads_2_wind
+      - file: design_workflow/general_loads/variable_loads_3_rain_snow
+      - file: design_workflow/general_loads/variable_loads_4_special
+      - file: design_workflow/general_loads/deflection_requirements
+    - file: design_workflow/general_mechanics/general_mechanics
+      sections:
+      - file: design_workflow/general_mechanics/symbols
+      - file: design_workflow/general_mechanics/cross_sectional_quantities
+      - file: design_workflow/general_mechanics/mechanic_formulas
+      - file: design_workflow/general_mechanics/forget_me_nots
+      - file: design_workflow/general_mechanics/beams_with_multiple_supports
+    - file: design_workflow/general_drawing/general_drawing
+      sections:
+      - file: design_workflow/general_drawing/technical_drawings
+      - file: design_workflow/general_drawing/cross_section_indications
 
-  - caption: Basis gegevens
+  - caption: Basic properties
     numbered: 2
     chapters:
-    - file: basics/Mechanica
-    - file: basics/Belastingen/belasting
+    - file: basics/general_materials
+    - file: basics/concrete/concrete
       sections:
-      - file: basics/Belastingen/Belastingen_grenstoestanden
-    - file: basics/Materialen/Materialen
+      - file: basics/concrete/information
+      - file: basics/concrete/material_characteristics_concrete
+      - file: basics/concrete/material_characteristics_concrete_steel
+      - file: basics/concrete/reinforcement
+      - file: basics/concrete/products_1_floors
+      - file: basics/concrete/products_2_beams
+      - file: basics/concrete/products_3_columns
+      - file: basics/concrete/concrete_construction_applications
+    - file: basics/steel/steel
       sections:
-      - file: basics/Materialen/Steel/steel
-        sections:
-        - file: basics/Materialen/Steel/information
-        - file: basics/Materialen/Steel/sectiontables
+      - file: basics/steel/information
+      - file: basics/steel/material_characteristics
+      - file: basics/steel/products_1_hot_rolled_sections
+      - file: basics/steel/products_2_cold_rolled_sections
+      - file: basics/steel/products_3_welded_sections
+      - file: basics/steel/explanation_cross_sectional_quantities
+      - file: basics/steel/dimension_tables
+      - file: basics/steel/castellated_beams
+      - file: basics/steel/integrated_beams
+      - file: basics/steel/steel_tube_profiles
+      - file: basics/steel/tube_profiles_trusses
+    - file: basics/wood/wood
+      sections:
+      - file: basics/wood/information
+      - file: basics/wood/material_characteristics
+      - file: basics/wood/dimension_tables
 
-
-  - caption: Ontwerp
+  - caption: Design guidelines
     numbered: 2
     chapters:
     - file: design/Beton/Beton
@@ -78,12 +105,12 @@ parts:
       - file: design/Hout/kolommen
       - file: design/Hout/verbindingen
 
-  - caption: Voorbeelden
+  - caption: Examples
     numbered: 2
     chapters:
-    - file: examples/hout/hout
+    - file: examples/wood/wood
       sections:
-      - file: examples/hout/voorontwerp_houten_hal
+      - file: examples/wood/voorontwerp_houten_hal
     - file: examples/steel/steel
       sections:
       - file: examples/steel/3d
