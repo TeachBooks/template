@@ -66,7 +66,7 @@ parts:
       - file: basics/steel/products_2_cold_rolled_sections
       - file: basics/steel/products_3_welded_sections
       - file: basics/steel/explanation_cross_sectional_quantities
-      - file: basics/steel/dimension_tables
+      - file: basics/steel/section_tables
       - file: basics/steel/castellated_beams
       - file: basics/steel/integrated_beams
       - file: basics/steel/steel_tube_profiles
