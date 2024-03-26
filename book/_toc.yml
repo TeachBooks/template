@@ -66,16 +66,17 @@ parts:
       - file: basics/steel/products_2_cold_rolled_sections
       - file: basics/steel/products_3_welded_sections
       - file: basics/steel/explanation_cross_sectional_quantities
-      - file: basics/steel/dimension_tables
+      - file: basics/steel/section_tables
       - file: basics/steel/castellated_beams
       - file: basics/steel/integrated_beams
-      - file: basics/steel/steel_tube_profiles
-      - file: basics/steel/tube_profiles_trusses
-    - file: basics/wood/wood
+      - file: basics/steel/hollow_sections
+      - file: basics/steel/hollow_sections_trusses
+    - file: basics/timber/timber
       sections:
-      - file: basics/wood/information
-      - file: basics/wood/material_characteristics
-      - file: basics/wood/dimension_tables
+      - file: basics/timber/information
+      - file: basics/timber/material_characteristics
+      - file: basics/timber/products
+      - file: basics/timber/dimension_tables
 
   - caption: Design guidelines
     numbered: 2
@@ -108,9 +109,9 @@ parts:
   - caption: Examples
     numbered: 2
     chapters:
-    - file: examples/wood/wood
+    - file: examples/timber/timber
       sections:
-      - file: examples/wood/voorontwerp_houten_hal
+      - file: examples/timber/voorontwerp_houten_hal
     - file: examples/steel/steel
       sections:
       - file: examples/steel/3d
