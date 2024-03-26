@@ -31,7 +31,7 @@ parts:
       - file: design_workflow/general_loads/variable_loads_2_wind
       - file: design_workflow/general_loads/variable_loads_3_rain_snow
       - file: design_workflow/general_loads/variable_loads_4_special
-      - file: design_workflow/general_loads/deflection_requirements
+      - file: design_workflow/general_loads/deformation limits
     - file: design_workflow/general_mechanics/general_mechanics
       sections:
       - file: design_workflow/general_mechanics/symbols
