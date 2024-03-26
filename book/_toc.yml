@@ -69,8 +69,8 @@ parts:
       - file: basics/steel/section_tables
       - file: basics/steel/castellated_beams
       - file: basics/steel/integrated_beams
-      - file: basics/steel/steel_tube_profiles
-      - file: basics/steel/tube_profiles_trusses
+      - file: basics/steel/hollow_sections
+      - file: basics/steel/hollow_sections_trusses
     - file: basics/wood/wood
       sections:
       - file: basics/wood/information
