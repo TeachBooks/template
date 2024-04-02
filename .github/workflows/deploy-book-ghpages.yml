@@ -72,6 +72,12 @@ jobs:
     - if: ${{ steps.cache-html.outputs.cache-hit != 'true' }}
       name: Preprocess & build the book from branch
       run: |
+        echo $PATH
+        pip install --user teachbooks --extra-index-url https://gitlab.tudelft.nl/api/v4/projects/13957/packages/pypi/simple
+        cat book/_toc.yml
+        teachbooks build --publish --process-only book/
+        mv book/.psorbooks/publish/_toc.yml book/.psorbooks/publish/_config.yml book/
+        cat book/_toc.yml
         jupyter-book build book/
 
     - name: Upload the built book HTML as an artifact
