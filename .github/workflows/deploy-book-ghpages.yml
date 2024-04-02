@@ -105,11 +105,15 @@ jobs:
       with:
         path: "final/"
 
-    - name: Symlink `book` to `main`
+    - name: Copy primary book to root, fail if names conflict
+      timeout-minutes: 1
       run: |
-        if test -d final/main; then
-          ln -s main final/book
+        GLOBIGNORE=".:.."
+        # -i leads to a prompt in case of conflict, => a timeout
+        if [ -d final/$PRIMARY_BRANCH ]; then
+          cp -irv final/$PRIMARY_BRANCH/* final/
         fi
+        ls -a final/
 
     - name: Load root page to redirect to `book/`
       run: |
