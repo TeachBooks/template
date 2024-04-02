@@ -81,30 +81,36 @@ parts:
   - caption: Design guidelines
     numbered: 2
     chapters:
-    - file: design/Beton/Beton
+    - file: design/concrete/concrete
       sections:
-      - file: design/Beton/stabiliteit
-      - file: design/Beton/vloeren
-      - file: design/Beton/balken
-      - file: design/Beton/wanden
-      - file: design/Beton/kolommen
-      - file: design/Beton/verbindingen
-    - file: design/Staal/Staal
+      - file: design/concrete/spans_in_concrete
+      - file: design/concrete/reinforcement_tables
+      - file: design/concrete/bubbledeck_floors
+      - file: design/concrete/composite_floors
+      - file: design/concrete/hollow_core_slabs
+      - file: design/concrete/precast_concrete_planks
+      - file: design/concrete/prefab_prestressed_beams
+      - file: design/concrete/bridge_beams
+    - file: design/steel/steel
       sections:
-      - file: design/Staal/stabiliteit
-      - file: design/Staal/vloeren
-      - file: design/Staal/balken
-      - file: design/Staal/wanden
-      - file: design/Staal/kolommen
-      - file: design/Staal/verbindingen
-    - file: design/Hout/Hout
+      - file: design/steel/spans_in_steel
+      - file: design/steel/steel_structures
+      - file: design/steel/connections_matrix
+      - file: design/steel/connections
+      - file: design/steel/buckling
+    - file: design/timber/timber
       sections:
-      - file: design/Hout/stabiliteit
-      - file: design/Hout/vloeren
-      - file: design/Hout/balken
-      - file: design/Hout/wanden
-      - file: design/Hout/kolommen
-      - file: design/Hout/verbindingen
+      - file: design/timber/spans_in_timber
+      - file: design/timber/timber_structures_and_details
+      - file: design/timber/connection_elements
+      - file: design/timber/trusses_and_joints
+    - file: design/foundations/foundations
+      sections:
+      - file: design/foundations/information
+      - file: design/foundations/design_guide
+      - file: design/foundations/foundation_methods_1
+      - file: design/foundations/foundation_methods_2
+      - file: design/foundations/tables
 
   - caption: Examples
     numbered: 2
