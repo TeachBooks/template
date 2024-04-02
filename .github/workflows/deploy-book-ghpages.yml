@@ -50,17 +50,27 @@ jobs:
       with:
         ref: ${{ matrix.branch }}
 
-    # Install dependencies
-    - name: Set up Python 3.11
+    - name: Cache page build
+      id: cache-html
+      uses: actions/cache@v4
+      with:
+        path: "book/_build/html"
+        key: html-build-${{ hashFiles('book/**', 'figures/**', 'requirements.txt') }}
+
+    - if: ${{ steps.cache-html.outputs.cache-hit != 'true' }}
+      name: Set up Python 3.11
       uses: actions/setup-python@v5
       with:
         python-version: 3.11
+        cache: 'pip'
 
-    - name: Install dependencies
+    - if: ${{ steps.cache-html.outputs.cache-hit != 'true' }}
+      name: Install dependencies
       run: |
         pip install -r requirements.txt
 
-    - name: Build the book from branch
+    - if: ${{ steps.cache-html.outputs.cache-hit != 'true' }}
+      name: Preprocess & build the book from branch
       run: |
         jupyter-book build book/
 
