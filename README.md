@@ -2,7 +2,7 @@
 
 This is the template book. You can fork this to create a book in as easy-as-possible a way. Focus is mostly on providing a clean and simple view to the key setup of our book repo.
 
-# How to deploy a fork of this book on GitHub Pages
+## How to deploy a fork of this book on GitHub Pages
 
 1. Click `Fork`, and set a name for your new book.
 2. To enable deploying via GitHub Actions, go to `⚙ Settings`, then to `Pages`, and under `Build and Deployment` set `Source` to `GitHub Actions`.
