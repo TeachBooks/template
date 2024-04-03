@@ -48,7 +48,7 @@ jobs:
         if [ "$BRANCHES_TO_DEPLOY" == '*' ]; then
           branches=$(git branch -r | sed 's,\s*origin/,,g' | jq -Rn '[inputs]')
         else
-          branches=$(echo $BRANCHES_TO_DEPLOY | tr ' ' '\n' | jq -Rn '[inputs]')
+          branches=$(echo "$BRANCHES_TO_DEPLOY" | tr ' ' '\n' | grep -E '\S' | jq -Rn '[inputs]')
         fi
         echo "branches=$(echo $branches)" >> $GITHUB_OUTPUT
 
@@ -100,10 +100,14 @@ jobs:
         cat book/_toc.yml
         jupyter-book build book/
 
+    - name: Clean branch name of disallowed characters
+      run: |
+        echo "MATRIX_BRANCH_NAME_CLEAN=$(echo ${{ matrix.branch }} | tr '/":<>|*?\/\\' '-')" >> $GITHUB_ENV
+
     - name: Upload the built book HTML as an artifact
       uses: actions/upload-artifact@v4
       with:
-        name: ${{ matrix.branch }}
+        name: ${{ env.MATRIX_BRANCH_NAME_CLEAN }}
         path: "book/_build/html"
 
   deploy-books:
