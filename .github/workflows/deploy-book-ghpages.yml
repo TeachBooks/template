@@ -141,11 +141,11 @@ jobs:
 
     - name: Symlink branch aliases
       run: |
-        echo $BRANCH_ALIASES | tr ' ' '\n' | { grep -E '\S' | :; } |
+        echo $BRANCH_ALIASES | tr ' ' '\n' | grep -E '\S' |
         while IFS=':' read -r key value; do
           # If the target branch is to be deployed, make symlink to it.
           if [ "$BRANCHES_TO_DEPLOY" == "*" ] || echo $BRANCHES_TO_DEPLOY | tr ' ' '\n' | grep "^$value$"; then
-            echo link $key -> $value
+            echo link $key "->" $value
             ln -s $value final/$key
           fi
         done
@@ -164,3 +164,4 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
