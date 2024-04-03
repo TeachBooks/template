@@ -93,12 +93,17 @@ jobs:
       name: Preprocess & build the book from branch
       run: |
         echo $PATH
+        # Install wrapper
+        # NOTE: teachbooks is already installed w requirements.txt, however not on PATH
+        # Installing with --user fixes this.
+        # TODO remove --extra-index-url once teachbooks is on PyPI
         pip install --user teachbooks --extra-index-url https://gitlab.tudelft.nl/api/v4/projects/13957/packages/pypi/simple
-        cat book/_toc.yml
-        teachbooks build --publish --process-only book/
-        mv book/.psorbooks/publish/_toc.yml book/.psorbooks/publish/_config.yml book/
-        cat book/_toc.yml
-        jupyter-book build book/
+        if [ ${{matrix.branch}} == $PRIMARY_BRANCH ]; then
+          teachbooks build --publish book/
+        else
+          teachbooks build book/
+        fi
+
 
     - name: Clean branch name of disallowed characters
       run: |
