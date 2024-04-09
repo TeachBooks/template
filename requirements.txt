@@ -1,5 +1,5 @@
 # first list the packages you wish to download from PyPI
-jupyter-book
+teachbooks # depends on jupyter-book
 # numpy
 
 # docutils version for reference page formatting

@@ -93,11 +93,6 @@ jobs:
       name: Preprocess & build the book from branch
       run: |
         echo $PATH
-        # Install wrapper
-        # NOTE: teachbooks is already installed w requirements.txt, however not on PATH
-        # Installing with --user fixes this.
-        # TODO remove --extra-index-url once teachbooks is on PyPI
-        pip install --user teachbooks --extra-index-url https://gitlab.tudelft.nl/api/v4/projects/13957/packages/pypi/simple
         if [ ${{matrix.branch}} == $PRIMARY_BRANCH ]; then
           teachbooks build --publish book/
         else
