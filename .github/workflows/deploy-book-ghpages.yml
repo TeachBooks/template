@@ -20,12 +20,12 @@ on:
 # Configuration variables may be set as explained here:
 # https://docs.github.com/en/actions/learn-github-actions/variables#creating-configuration-variables-for-a-repository
 env:
-  # `publish` as primary by default
-  PRIMARY_BRANCH: ${{ vars.PRIMARY_BRANCH != '' && vars.PRIMARY_BRANCH || 'publish' }}
+  # `main` as primary by default, advised to make it `published` to start using draft-publish-workflow
+  PRIMARY_BRANCH: ${{ vars.PRIMARY_BRANCH != '' && vars.PRIMARY_BRANCH || 'main' }}
   # Space-separated list of alias-rules, e.g. 'draft:main alias:really-long-branch-name'
-  # By default, `draft` links to `main`.
+  # By default, `draft` links to `main`. Advised to link `book` to `publish`
   # If no aliases are wanted, BRANCH_ALIASES may be set to ' ' (space).
-  BRANCH_ALIASES: ${{ vars.BRANCH_ALIASES != '' && vars.BRANCH_ALIASES || 'draft:main book:publish' }}
+  BRANCH_ALIASES: ${{ vars.BRANCH_ALIASES != '' && vars.BRANCH_ALIASES || 'draft:main' }}
   # Space-separated list of branch names, e.g. 'main second third'.
   # By default, deploy all branches. This is indicated by '*'.
   BRANCHES_TO_DEPLOY: ${{ vars.BRANCHES_TO_DEPLOY != '' && vars.BRANCHES_TO_DEPLOY || '*' }}
