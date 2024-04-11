@@ -2,6 +2,8 @@
 
 This is the template book. You can fork this to create a book in as easy-as-possible a way. Focus is mostly on providing a clean and simple view to the key setup of our book repo.
 
+## To be update, use this repository as a template, not as a fork
+
 ## How to deploy a fork of this book on GitHub Pages
 
 1. Click `Fork`, and set a name for your new book.
