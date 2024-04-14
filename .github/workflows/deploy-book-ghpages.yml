@@ -3,18 +3,13 @@ name: deploy-book
 # Based on:
 # https://jupyterbook.org/en/stable/publish/gh-pages.html
 
-# Run on a push to any branch, then deploy books from all branches.
+# NOTE to template users:
+# You should not need to edit this file. This is not the workflow file that is being run on every push.
+# Instead, on every push workflow `call-deploy-book` calls the `deploy-book` workflow at the original template repository:
+# https://github.com/TeachBooks/template
+
 on:
-  push:
-    branches:
-    - '**'
-    # If your git repository has the Jupyter Book within some-subfolder next to
-    # unrelated files, you can make this run only if a file within that specific
-    # folder has been modified.
-    #
-    # paths:
-    # - some-subfolder/**
-  workflow_dispatch:
+  workflow_call:
 
 # Inherit configuration variables in the environment, or assign default values.
 # Configuration variables may be set as explained here:

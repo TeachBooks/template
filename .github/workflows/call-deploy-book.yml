@@ -1,0 +1,23 @@
+name: call-deploy-book
+
+on:
+  push:
+    branches:
+    - '**'
+    # If your git repository has the Jupyter Book within some-subfolder next to
+    # unrelated files, you can make this run only if a file within that specific
+    # folder has been modified.
+    #
+    # paths:
+    # - some-subfolder/**
+  workflow_dispatch:
+
+jobs: 
+  call-workflow:
+    uses: TeachBooks/template/.github/workflows/deploy-book-ghpages.yml@main
+    secrets: inherit
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+
