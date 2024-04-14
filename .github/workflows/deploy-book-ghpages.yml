@@ -41,10 +41,14 @@ jobs:
       name: Set branches
       run: |
         if [ "$BRANCHES_TO_DEPLOY" == '*' ]; then
-          branches=$(git branch -r | sed 's,\s*origin/,,g' | jq -Rn '[inputs]')
+          branches=$(git branch -r | sed 's,\s*origin/,,g')
         else
-          branches=$(echo "$BRANCHES_TO_DEPLOY" | tr ' ' '\n' | grep -E '\S' | jq -Rn '[inputs]')
+          branches=$(echo "$BRANCHES_TO_DEPLOY" | tr ' ' '\n' | grep -E '\S')
         fi
+        echo "$branches" > raw.txt
+        echo "$branches" | tr '/":<>|*?\/\\' '-' > clean.txt
+        paste -d ' ' raw.txt clean.txt | sed 's/ / -> /g'
+        branches=$(echo "$branches" | jq -Rn '[inputs]')
         echo "branches=$(echo $branches)" >> $GITHUB_OUTPUT
 
   build-books:
