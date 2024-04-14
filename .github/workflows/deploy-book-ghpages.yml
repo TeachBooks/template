@@ -133,19 +133,22 @@ jobs:
       run: |
         GLOBIGNORE=".:.."
         # -i leads to a prompt in case of conflict, => a timeout
-        if [ -d final/$PRIMARY_BRANCH ]; then
-          cp -irv final/$PRIMARY_BRANCH/* final/
+        if [ -d final/"$PRIMARY_BRANCH" ]; then
+          cp -irv final/"$PRIMARY_BRANCH"/* final/
         fi
         ls -a final/
 
     - name: Symlink branch aliases
       run: |
-        echo $BRANCH_ALIASES | tr ' ' '\n' | grep -E '\S' |
+        echo "$BRANCH_ALIASES" | tr ' ' '\n' | grep -E '\S' |
         while IFS=':' read -r key value; do
           # If the target branch is to be deployed, make symlink to it.
-          if [ "$BRANCHES_TO_DEPLOY" == "*" ] || echo $BRANCHES_TO_DEPLOY | tr ' ' '\n' | grep "^$value$"; then
-            echo link $key "->" $value
-            ln -s $value final/$key
+          if [ "$BRANCHES_TO_DEPLOY" == "*" ] || echo "$BRANCHES_TO_DEPLOY" | tr ' ' '\n' | grep "^$value$"; then
+            # Clean branch names of special characters
+            clean_key=$(echo "$key" | tr '/":<>|*?\/\\' '-')
+            clean_value=$(echo "$key" | tr '/":<>|*?\/\\' '-')
+            echo link $clean_key "->" $clean_value
+            ln -s "$clean_value" final/"$clean_key"
           fi
         done
 
@@ -163,4 +166,3 @@ permissions:
   contents: read
   pages: write
   id-token: write
-
