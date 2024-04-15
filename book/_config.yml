@@ -11,10 +11,6 @@ launch_buttons:
 
 only_build_toc_files: true
 
-html:
-  comments:
-    hypothesis: true
-
 sphinx:
   config:
     html_show_copyright: true
