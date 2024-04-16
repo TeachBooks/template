@@ -28,4 +28,4 @@ This is the template book. You can use this book as a template to start your own
 
 ![action](https://teachbooks.tudelft.nl/jupyter-book-manual/_images/action.png)
 
-5. When the workflow has finished, visit your build book at `https://<username or organiszation_name>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository.
+5. When the workflow has finished, visit your build book at `https://<username/organization_name>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository.
