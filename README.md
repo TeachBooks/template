@@ -30,4 +30,4 @@ This is the template book. You can use this book as a template to start your own
 
 5. When the workflow has finished, visit your build book at `https://<username>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository.
 
-To learn more about how we do this, please see the [GitHub Actions documentation](https://docs.github.com/en/actions) and our deployment pipeline configuration file `.github/workflows/deploy-book-ghpages.yml` [here](https://github.com/TeachBooks/template/blob/main/.github/workflows/deploy-book-ghpages.yml).
+To learn more about how we do this, please see the =our deployment pipeline configuration file `.github/workflows/deploy-book-ghpages.yml` [here](https://github.com/TeachBooks/deploy-book-workflow/blob/main/.github/workflows/deploy-book.yml) in it's [repository](https://github.com/TeachBooks/deploy-book-workflow) and [GitHub Actions documentation](https://docs.github.com/en/actions) .
