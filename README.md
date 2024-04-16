@@ -29,5 +29,3 @@ This is the template book. You can use this book as a template to start your own
 ![action](https://teachbooks.tudelft.nl/jupyter-book-manual/_images/action.png)
 
 5. When the workflow has finished, visit your build book at `https://<username or organiszation_name>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository.
-
-To learn more about how we do this, please see the our deployment pipeline configuration file [`.github/workflows/deploy-book-ghpages.yml`](https://github.com/TeachBooks/deploy-book-workflow/blob/main/.github/workflows/deploy-book.yml) in its [repository](https://github.com/TeachBooks/deploy-book-workflow) and [GitHub Actions documentation](https://docs.github.com/en/actions) .
