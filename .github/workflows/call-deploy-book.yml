@@ -8,10 +8,9 @@ on:
     # unrelated files, you can make this run only if a file within that specific
     # folder (or the workflow file itself) has been modified.
     #
-    # paths:
-    # - some-subfolder/**
-    # - .github/workflows/call-deploy-book.yml
-    #
+    paths:
+    - book/**
+    - .github/workflows/call-deploy-book.yml
   workflow_dispatch:
 
 jobs: 
