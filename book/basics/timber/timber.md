@@ -1,4 +1,0 @@
-# Timber
-
-```{tableofcontents}
-```

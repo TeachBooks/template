@@ -1,4 +1,0 @@
-# General mechanics
-
-```{tableofcontents}
-```

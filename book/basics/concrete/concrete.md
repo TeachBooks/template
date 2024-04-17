@@ -1,4 +1,0 @@
-# Concrete
-
-```{tableofcontents}
-```

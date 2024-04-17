@@ -1,4 +1,0 @@
-# Steel
-
-```{tableofcontents}
-```
