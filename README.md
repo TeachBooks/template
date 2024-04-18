@@ -5,7 +5,7 @@
 This page is useful for user type 3, 4 and 5.
 ```
 
-This page shows you how as an example how to start your own Jupyter Book and hosting that book online. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book.
+The template allows you to start your own Jupyter Book and hosting that book online without knowledge on Git, the Jupyter book package, python or anaconda. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book.
 
 1. To get started making your Jupyter Book with our functionalities, use the [template book](https://github.com/TeachBooks/template) as template:
 
@@ -40,6 +40,4 @@ This page shows you how as an example how to start your own Jupyter Book and hos
 ```{figure} figures/action.png
 :name: action
 ```
-5. When the workflow has finished, visit your build book at `https://<username or organiszation_name>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository. These links are visible in the action as well, as shown in the figure above..
-
-Now that you have your book, you can continue editing your book as described in the other chapters in this book
+5. When the workflow has finished, visit your build book at `https://<username or organiszation_name>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository. These links are visible in the action as well, as shown in the figure above or in the GitHub repository website which you set in step 3.
