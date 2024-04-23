@@ -1,7 +1,7 @@
 title: Template
-author: Books CEG
+author: TeachBooks
 logo: figures/TUDelft_logo_rgb.png
-copyright: Delft University of Technology, CC BY 4.0 # overriden by extra footer/sphinx config
+copyright: Delft University of Technology, CC BY 4.0
 
 execute:
   execute_notebooks: "off"
