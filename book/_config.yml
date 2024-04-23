@@ -6,9 +6,6 @@ copyright: Delft University of Technology, CC BY 4.0
 execute:
   execute_notebooks: "off"
 
-launch_buttons:
-  thebe: true
-
 only_build_toc_files: true
 
 html:
@@ -22,9 +19,14 @@ sphinx:
     thebe_config:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
+    html_theme_options:
+      repository_url: "https://github.com/TeachBooks/template"
+      use_repository_button: true
+      use_issues_button : true
+      launch_buttons:
+          thebe: true
   extra_extensions:
     - sphinx.ext.imgconverter
-    - download_link_replacer
     - jupyterbook_patches
 
 bibtex_bibfiles: 
