@@ -7,6 +7,22 @@ This page is useful for user type 3, 4 and 5.
 
 The template allows you to start your own Jupyter Book and hosting that book online without knowledge on Git, the Jupyter book package, python or anaconda. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book.
 
+## Features
+- A github repository structure for making a [Jupyter Book](https://github.com/executablebooks/jupyter-book) (`/book`)
+- An empty book containing an intro page on root, an example markdown page, an example jupyter notebook page, an example references page. and an example credits page. (`/book/_toc.yml`, `/book/_config.yml`, `/book/credits.md`, `/book/intro.md`, `/book/references.md`, `/book/some_content/overview.md`, `/book/some_content/text_and_code.ipynb`)
+- A file ready for adding references (`references.bib`, `/book/references.md`)
+- An example favicon (web browser icon) (`/book/figures/favicon.ico`, `book/_config.yml`.)
+- An example book logo (`/book/figures/TUDelft_logo_rgb.png`, `/book/config.yml`)
+- The configuration files set ready to make your Jupyter Notebooks pages work with [live code using our sphinx-thebe extension](https://teachbooks.tudelft.nl/jupyter-book-manual/features/live_code.html) and our recommended settings (`/book/config.yml`)
+- An example of setting up preprocessing your table of contents to hide certain draft chapters for eg. students (`_toc.yml`)
+- A file containing all the recommended software packages (`requirements.txt`)
+- A file containing the recommended license CC BY 4.0 (`LICENSE.md`)
+- Our [GitHub workflow for publishing your book to GitHub Pages](https://github.com/TeachBooks/deploy-book-workflow) (`.github/workflow/call-deploy-book.yml`)
+- A gitignore file containing standard python filetype to ignore (`.gitignore`)
+- A readme containing information how to use the template, which can adjusted after using the template (`README.md`)
+
+## How to get started
+
 1. To get started making your Jupyter Book with our functionalities, use the [template book](https://github.com/TeachBooks/template) as template:
 
 ```{figure} figures/use_template.png
