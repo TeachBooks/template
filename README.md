@@ -19,6 +19,11 @@ The template allows you to start your own Jupyter Book and hosting that book onl
 
 ## How to get started
 
+How to use the template is demonstrated in the figure below, followed by a step-by-step tutorial.
+
+![template-demo](figures/teachbooks-template.gif)
+The demonstration is also available as a video [here](https://youtu.be/nN3Oi_MVvF0).
+
 1. To get started making your Jupyter Book with our functionalities, use the [template book](https://github.com/TeachBooks/template) as template:
 
 ![use-template](figures/use_template.png)
