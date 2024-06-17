@@ -5,9 +5,6 @@ parts:
   - caption: Contents
     chapters:
     - file: some_content/overview.md
-# START REMOVE-FROM-PUBLISH
       sections:
       - file: some_content/text_and_code.ipynb
-# END REMOVE-FROM-PUBLISH
     - file: references.md
-    - file: credits.md
