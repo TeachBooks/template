@@ -7,11 +7,6 @@ execute:
 
 only_build_toc_files: true
 
-html:
-  favicon : "figures/favicon.ico"
-  baseurl :  "https://teachbooks.github.io/template/" #Replace this with your own URL
-  home_page_in_navbar       : true
-
 sphinx:
   config:
     html_js_files:
@@ -25,6 +20,8 @@ sphinx:
       use_issues_button : true
       launch_buttons:
         thebe: true
+      favicon : "figures/favicon.ico"
+      baseurl :  "https://teachbooks.github.io/template/" #Replace this with your own URL
     html_show_copyright: false
   extra_extensions:
     - sphinx.ext.imgconverter
