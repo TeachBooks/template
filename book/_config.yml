@@ -29,6 +29,7 @@ sphinx:
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches
+    - download_link_replacer
     - sphinx.ext.extlinks
 
 bibtex_bibfiles: 
