@@ -10,6 +10,7 @@ on:
     #
     paths:
     - book/**
+    - requirements.txt
     - .github/workflows/call-deploy-book.yml
   workflow_dispatch:
 
