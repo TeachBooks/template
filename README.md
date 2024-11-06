@@ -70,3 +70,6 @@ Set the repository website as your GitHub Pages website under <svg aria-hidden="
 ```{figure} figures/use_github_pages_website.png
 :name: github_pages_as_website
 ```
+
+## Contribute
+This tool's repository is stored on [GitHub](https://github.com/TeachBooks/template). The `README.md` of the branch `manual_description` is also part of the [TeachBooks manual](https://teachbooks.tudelft.nl/jupyter-book-manual/external/template/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/template). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitLab repository of the manual](https://gitlab.tudelft.nl/interactivetextbooks-citg/jupyter-book-manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodules git@gitlab.tudelft.nl:interactivetextbooks-citg/jupyter-book-manual.git`.
