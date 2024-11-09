@@ -8,4 +8,5 @@ parts:
       sections:
       - file: some_content/text_and_code.ipynb
     - file: references.md
+    - file: changelog.md
     - file: credits.md
