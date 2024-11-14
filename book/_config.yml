@@ -9,7 +9,7 @@ only_build_toc_files: true
 
 html:
   favicon : "figures/TB_favicon.ico"
-  baseurl :  "url" #Replace this with your own URL
+  baseurl :  "https://teachbooks.io/" #Replace this with your own URL
 
 sphinx:
   config:
@@ -19,9 +19,9 @@ sphinx:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
-      # repository_url: "url" #add your own repo URL here
-      # use_repository_button: true
-      # use_issues_button : true
+      repository_url: "https://github.com/user/repo" #add your own repo URL here
+      use_repository_button: true
+      use_issues_button : true
       launch_buttons:
         thebe: true
     html_show_copyright: false
