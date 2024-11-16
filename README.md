@@ -1,6 +1,6 @@
 # Your first TeachBook using the GitHub template
 
-The template allows you to start your own TeachBook and hosting that TeachBook online without knowledge on Git, the Jupyter book package, python or anaconda. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book. Please look at our manual (https://teachbooks.tudelft.nl/jupyter-book-manual) to find more about that!
+The template allows you to start your own TeachBook and hosting that TeachBook online without knowledge on Git, the Jupyter book package, python or anaconda. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book. Please look at our manual (https://teachbooks.io/manual) to find more about that!
 
 ## Features
 - A github repository structure for making a [Jupyter Book](https://github.com/executablebooks/jupyter-book) (`/book`)
@@ -8,7 +8,7 @@ The template allows you to start your own TeachBook and hosting that TeachBook o
 - A file ready for adding references (`references.bib`, `/book/references.md`)
 - An example favicon (web browser icon) (`/book/figures/favicon.ico`, `book/_config.yml`.)
 - An example logo (`/book/figures/TUDelft_logo_rgb.png`, `/book/config.yml`)
-- The configuration files set ready to make your Jupyter Notebooks pages work with [live code using our sphinx-thebe extension](https://teachbooks.tudelft.nl/jupyter-book-manual/features/live_code.html) and our recommended settings (`/book/config.yml`)
+- The configuration files set ready to make your Jupyter Notebooks pages work with [live code using our sphinx-thebe extension](https://teachbooks.io/manual/features/live_code.html) and our recommended settings (`/book/config.yml`)
 - An example of setting up preprocessing your table of contents to hide certain draft chapters for eg. students (`_toc.yml`)
 - A file containing all the recommended software packages (`requirements.txt`)
 - A file containing the recommended license CC BY 4.0 (`LICENSE.md`)
@@ -52,4 +52,4 @@ Set the repository website as your GitHub Pages website under `Code`- `About` - 
 ![GitHub pages as website](figures/use_github_pages_website.png)
 
 ## Contribute
-This tool's repository is stored on [GitHub](https://github.com/TeachBooks/template). The `README.md` of the branch `manual_description` is also part of the [TeachBooks manual](https://teachbooks.tudelft.nl/jupyter-book-manual/external/template/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/template). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitLab repository of the manual](https://gitlab.tudelft.nl/interactivetextbooks-citg/jupyter-book-manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodules git@gitlab.tudelft.nl:interactivetextbooks-citg/jupyter-book-manual.git`.
+This tool's repository is stored on [GitHub](https://github.com/TeachBooks/template). The `README.md` of the branch `manual_description` is also part of the [TeachBooks manual](https://teachbooks.io/manual/external/template/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/template). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
