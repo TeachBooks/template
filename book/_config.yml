@@ -1,5 +1,5 @@
 title: Template
-author: TeachBooks Team, built with <a href="https://teachbooks.tudelft.nl/">TeachBooks</a> and <a href="https://jupyterbook.org/">Jupyter Book</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a> #add your own name here
+author: TeachBooks Team, built with <a href="https://teachbooks.io">TeachBooks</a> and <a href="https://jupyterbook.org/">Jupyter Book</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a> #add your own name here
 logo: figures/TB_logo.png #add your own logo here
 
 execute:
@@ -9,7 +9,7 @@ only_build_toc_files: true
 
 html:
   favicon : "figures/TB_favicon.ico"
-  baseurl :  "https://teachbooks.github.io/template/" #Replace this with your own URL
+  baseurl :  "https://teachbooks.io/" #Replace this with your own URL
 
 sphinx:
   config:
@@ -19,7 +19,10 @@ sphinx:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
-      repository_url: "https://github.com/TeachBooks/template" #add your own repo URL here
+      repository_url: "https://github.com/user/repo" #add your own repo URL here
+      path_to_docs: "book"
+      repository_branch: "main"
+      use_edit_page_button: true
       use_repository_button: true
       use_issues_button : true
       launch_buttons:
