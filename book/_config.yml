@@ -19,7 +19,7 @@ sphinx:
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
       logo:
-        text: TeachBooks Template
+        text: Template
         image_light: TB_logo.png # Put your logo for the light mode here (can be the same as image_dark)
         image_dark: TB_logo_dark.png # Put your logo for the dark mode here (can be the same as image_light)
       repository_url: "https://github.com/user/repo" #add your own repo URL here
