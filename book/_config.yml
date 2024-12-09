@@ -34,9 +34,9 @@ sphinx:
     html_last_updated_fmt: '%B %-d, %Y'
     html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
     mathjax3_config:
-     chtml: {
-       mtextInheritFont: true # To typeset text within math prettier
-     }
+      chtml: {
+        mtextInheritFont: true # To typeset text within math prettier
+      }
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches
