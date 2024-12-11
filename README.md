@@ -1,4 +1,4 @@
-# Your first TeachBook using the GitHub template
+# TeachBooks template
 
 ```{admonition} User types
 :class: tip
