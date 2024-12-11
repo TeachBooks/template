@@ -1,6 +1,5 @@
 title: Template
 author: TeachBooks Team, built with <a href="https://teachbooks.io">TeachBooks</a> and <a href="https://jupyterbook.org/">Jupyter Book</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a> #add your own name here
-logo: figures/TB_logo.png #add your own logo here
 
 execute:
   execute_notebooks: "off"
@@ -19,6 +18,10 @@ sphinx:
       use_thebe_lite: true
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
     html_theme_options:
+      logo:
+        text: Template
+        image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
+        image_dark: TeachBooks_logo_inverted.svg # Put your logo for the dark mode here (can be the same as image_light)
       repository_url: "https://github.com/user/repo" #add your own repo URL here
       path_to_docs: "book"
       repository_branch: "main"
@@ -29,6 +32,11 @@ sphinx:
         thebe: true
     html_show_copyright: false
     html_last_updated_fmt: '%B %-d, %Y'
+    html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
+    mathjax3_config:
+      chtml: {
+        mtextInheritFont: true # To typeset text within math prettier
+      }
   extra_extensions:
     - sphinx.ext.imgconverter
     - jupyterbook_patches
