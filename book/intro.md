@@ -10,7 +10,7 @@ This book can be used as a template for other books. It includes a starter packa
 
 Can you add some content to this page? Let's start with just some text!
 
-1. Go to the source file of this page on your GitHub repository - {octicon}`code;1em` `Code` - `Book` - `intro.md` - {octicon}`pencil;1em` `Edit this file`
+1. Go to the source file of this page on your GitHub repository (`https://github.com/<your_username>/<your_repo_name>`) - {octicon}`code;1em` `Code` - `Book` - `intro.md` - {octicon}`pencil;1em` `Edit this file`
 2. Add some text
 3. Click `Commit changes`
 4. Add a description of your change
