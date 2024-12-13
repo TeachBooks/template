@@ -7,6 +7,9 @@ parts:
     - file: some_content/overview.md
       sections:
       - file: some_content/text_and_code.ipynb
+    - file: exercises/exercises
+      sections:
+      - file: exercises/001.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
