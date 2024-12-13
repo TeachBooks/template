@@ -13,6 +13,7 @@ parts:
       - file: exercises/002.md
       - file: exercises/003.md
       - file: exercises/004.md
+      - file: exercises/005.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
