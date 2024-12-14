@@ -6,10 +6,7 @@ parts:
     chapters:
     - file: some_content/overview.md
       sections:
-      # DEC 14, 2024: REINSTATE THE COMMENTED PAGE ONCE GITLAB.TUDELFT.NL IS BACK ONLINE
-      # - file: some_content/text_and_code.ipynb
-      - file: some_content/text_and_code_gitlab_down.ipynb
-      # END OF DEC 14, 2024 OUTAGE COMMENT
+      - file: some_content/text_and_code.ipynb
     - file: exercises/exercises
       sections:
       - file: exercises/001.md
