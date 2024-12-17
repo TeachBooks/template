@@ -1,5 +1,7 @@
 # TeachBooks template
 
+> This page reuses CC BY 4.0 licensed content from {cite:t}`template`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+
 ```{admonition} User types
 :class: tip
 This page is useful for user type 3, 4 and 5.
