@@ -1,4 +1,4 @@
-# Summary of Workshop: All Exercises
+# Summary of exercises: All Exercises
 
 With the exercises, you did all the steps of our TeachBooks workflow!
 
