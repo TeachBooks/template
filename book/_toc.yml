@@ -16,6 +16,15 @@ parts:
       - file: exercises/005.md
       - file: exercises/006.md
       - file: exercises/summary
+# Advanced exercises
+#   - file: advances_exercises.md
+#     sections:
+#     - file: user_type_3.md
+#       sections:
+#       - file: exercises/007.md
+#       - file: exercises/...
+#     - file: user_type_4.md
+#     etc.
     - file: references.md
     - file: changelog.md
     - file: credits.md
