@@ -1,5 +1,7 @@
 # Summary of exercises: All Exercises
 
+> This page reuses CC BY 4.0 licensed content from {cite:t}`template`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+
 With the exercises, you did all the steps of our TeachBooks workflow!
 
 ```{figure} ../figures/TeachBooks_flowchart.svg

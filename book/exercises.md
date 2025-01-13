@@ -1,5 +1,7 @@
 # Exercises
 
+> This page reuses CC BY 4.0 licensed content from {cite:t}`template`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+
 Getting used to the syntax of writing in a Jupyter Book can be a bit daunting at the start, not to mention becoming familiar with the various tools and workflows required. To help make the learning curve somewhat easier to travel, a number of exercises have been prepared for you as part. The exercises are designed such that no prior experience with any tools or programming is required, as long as you have read the preceding introductory pages.
 
 ```{exercise}
