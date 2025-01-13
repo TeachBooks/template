@@ -7,7 +7,6 @@ execute:
 only_build_toc_files: true
 
 html:
-  favicon : "figures/TB_favicon.ico"
   baseurl :  "https://oit.tudelft.nl/" #Replace this with your own URL
 
 sphinx:
