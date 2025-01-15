@@ -42,6 +42,7 @@ sphinx:
     - sphinx_image_inverter
     - sphinx_exercise
     - sphinx_tudelft_theme
+    - teachbooks_sphinx_tippy
 
 bibtex_bibfiles: 
   - references.bib
