@@ -1,3 +1,4 @@
+Title: TeachBooks template
 author: TeachBooks Team, built with <a href="https://teachbooks.io">TeachBooks</a> and <a href="https://jupyterbook.org/">Jupyter Book</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a> #add your own name here
 
 execute:
@@ -42,6 +43,8 @@ sphinx:
     - download_link_replacer
     - sphinx.ext.extlinks
     - sphinx_image_inverter
+    - sphinx_exercise
+    - teachbooks_sphinx_tippy
 
 bibtex_bibfiles: 
   - references.bib

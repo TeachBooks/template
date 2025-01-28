@@ -15,22 +15,22 @@ The template allows you to start your own TeachBook and hosting that TeachBook o
 
 How to use the template is demonstrated in the figure below, all steps are elaborated on in the following step-by-step tutorial.
 
-```{figure} figures/teachbooks-template.gif
+```{figure} https://github.com/TeachBooks/template_figures/blob/main/teachbooks-template.gif?raw=true
 ---
 name: template_demo_public
 ---
 Demonstration for a public repository, video available [here](https://youtu.be/nN3Oi_MVvF0)
 ```
 
-1. To get started making your TeachBook with our functionalities, use the [template TeachBook](https://github.com/TeachBooks/template) as template:
+1. To get started making your TeachBook with our functionalities, use the [template TeachBook](https://github.com/TeachBooks/main/template) as template:
 
-```{figure} figures/use_template.png
+```{figure} https://github.com/TeachBooks/template_figures/blob/main/use_template.png?raw=true
 :name: use-template
 ```
 
 2. Fill in a repository name, this name will be used in the future url of your book:
 
-```{figure} figures/create_new_repository.png
+```{figure} https://github.com/TeachBooks/template_figures/blob/main/create_new_repository.png?raw=true
 :name: create_new_repository
 ```
 
@@ -40,13 +40,13 @@ Demonstration for a public repository, video available [here](https://youtu.be/n
 
 5. You need to activate GitHub pages so that your website is published to the internet. As long as you don't do this your TeachBook is not published online. Actually, now that you've taken this template our workflow tries to publish it to GitHub pages, which you didn't have the chance to activate yet. That's why you probably received an email with 'call-deploy-book: Some jobs were not successful' and you see the failed job under {octicon}`play;1em` `Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit`. You can activate GitHub pages by setting the source for GitHub pages to GitHub Actions under {octicon}`gear;1em` `Settings` - {octicon}`browser;1em` `Pages` - `Build and deployment` - `Source` - `GitHub Actions`:
 
-```{figure} figures/set_up_pages.png
+```{figure} https://github.com/TeachBooks/template_figures/blob/main/set_up_pages.png?raw=true
 :name: activate_pages
 ```
 
 6. Make an edit to the TeachBook by editing and committing changes to one of the files in the `book/` subdirectory (available under {octicon}`code;1em` `Code`).  Now checkout the progress of the publishing workflow under {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. Remember, the first commit which is there has failed because GitHub Pages wasn't activated at the time of `Initial commit`, you could also re-run that job if you don't want to make an edit. You can do so by running the workflow from {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit` - {octicon}`sync;1em` `Re-run all jobs` - `Re-run jobs`:
 
-```{figure} figures/action_re-run.jpeg
+```{figure} https://github.com/TeachBooks/template_figures/blob/main/action_re-run.jpeg?raw=true
 :name: action
 ```
 
@@ -54,12 +54,14 @@ Demonstration for a public repository, video available [here](https://youtu.be/n
 
 8. Want to get started directly? Your book contains a few exercises to get your started! Visit `https://<username or organiszation_name>.github.io/<repository_name>/exercises/exercises` (case sensitive) to get started with the first ones to get the basics of how to interact with your book on GitHub.
 
-![exercises](figures/exercises.png)
-
+```{figure} https://github.com/TeachBooks/template_figures/blob/main/exercises.png?raw=true
+:name: github_pages_as_website
+:width: 300px
+```
 Additional tip: 
 Set the repository website as your GitHub Pages website under {octicon}`code;1em` `Code`- `About` - {octicon}`gear;1em` - `Website` - `Use your GitHub Pages Website`
 
-```{figure} figures/use_github_pages_website.png
+```{figure} https://github.com/TeachBooks/template_figures/blob/main/use_github_pages_website.png?raw=true
 :name: github_pages_as_website
 ```
 
