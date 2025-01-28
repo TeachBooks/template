@@ -56,7 +56,7 @@ Demonstration for a public repository, video available [here](https://youtu.be/n
 
 ```{figure} https://github.com/TeachBooks/template_figures/blob/main/exercises.png?raw=true
 :name: github_pages_as_website
-:width: 300px
+:width: 200px
 ```
 Additional tip: 
 Set the repository website as your GitHub Pages website under {octicon}`code;1em` `Code`- `About` - {octicon}`gear;1em` - `Website` - `Use your GitHub Pages Website`
