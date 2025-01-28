@@ -10,17 +10,17 @@ The template allows you to start your own open interactive textbook and hosting 
 
 How to use the template is demonstrated in the figure below, all steps are elaborated on in the following step-by-step tutorial.
 
-![Demonstration for a public repository](figures/teachbooks-template.gif)
+![Demonstration for a public repository](https://github.com/TeachBooks/template_figures/blob/main/teachbooks-template.gif?raw=true)
 Video available [here](https://youtu.be/nN3Oi_MVvF0)
 
 
 1. To get started making your open interactive textbook with our functionalities, use the [TU Delft template](https://github.com/TUDelft-books/TUDelft-template) as template:
 
-![Use template](figures/use_template.png)
+![Use template](https://github.com/TeachBooks/template_figures/blob/main/use_template.png?raw=true)
 
 2. Fill in a repository name, this name will be used in the future url of your book. If you're a member of the [TUDelft-books GitHub Organization](https://github.com/TUDelft-books) you can add your book directly to that organization to have it hosted on oit.tudelft.nl
 
-![Create new repository](figures/create_new_repository.png)
+![Create new repository](https://github.com/TeachBooks/template_figures/blob/main/create_new_repository.png?raw=true)
 
 3. You can choose for `Private` only when you're a member of the [TUDelft-books GitHub Organization](https://github.com/TUDelft-books) and whenever that organization is one the TU Delft GitHub Enterprise account (which it's not yet at the moment). Otherwise, you won't be able to publish your open interactive textbook online. Furthermore, it prevents people from contributing to your book, making your book essentially 'closed' instead of 'open.
 
@@ -28,22 +28,22 @@ Video available [here](https://youtu.be/nN3Oi_MVvF0)
 
 5. You need to activate GitHub pages so that your website is published to the internet. As long as you don't do this your open interactive textbook is not published online. Actually, now that you've taken this template our workflow tries to publish it to GitHub pages, which you didn't have the chance to activate yet. That's why you probably received an email with 'call-deploy-book: Some jobs were not successful' and you see the failed job under `Initial commit`. You can activate GitHub pages by setting the source for GitHub pages to GitHub Actions under `Settings` - `Pages` - `Build and deployment` - `Source` - `GitHub Actions`:
 
-![Activate GitHub Pages](figures/set_up_pages.png)
+![Activate GitHub Pages](https://github.com/TeachBooks/template_figures/blob/main/set_up_pages.png?raw=true)
 
 6. Make an edit to the open interactive textbook by editing and committing changes to one of the files in the `book/` subdirectory (available under `Code`).  Now checkout the progress of the publishing workflow under `Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. Remember, the first commit which is there has failed because GitHub Pages wasn't activated at the time of `Initial commit`, you could also re-run that job if you don't want to make an edit. You can do so by running the workflow from `Actions` - `All workflows` - `call-deploy-book` - `Initial commit` - `Re-run all jobs` - `Re-run jobs`:
 
-![Action](figures/action_re-run.jpeg)
+![Action](https://github.com/TeachBooks/template_figures/blob/main/action_re-run.jpeg?raw=true)
 
 7. When the workflow has finished, visit your build book at `https://<username or organisation_name>.github.io/<repository_name>` (case sensitive). If you added it to the [TUDelft-books GitHub Organization](https://github.com/TUDelft-books) in step 2 it's on `https://oit.tudelft.nl/<repository_name>'. For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the TeachBooks template repository and it's [https://oit.tudelft.nl/TUDelft-template/](https://oit.tudelft.nl/TUDelft-template/) for the TU Delft specific version of it. These links are visible in the action's summary as well, as shown in the figure of step 4.
 
 8. Want to get started directly? Your book contains a few exercises to get your started! Visit `https://<username or organiszation_name>.github.io/<repository_name>/exercises/exercises` or  `https://oit.tudelft.nl/<repository_name>/exercises/exercises' (case sensitive) to get started with the first ones to get the basics of how to interact with your book on GitHub.
 
-![exercises](figures/exercises.png)
+![exercises](https://github.com/TeachBooks/template_figures/blob/main/exercises.png?raw=true)
 
 Additional tip: 
 Set the repository website as your GitHub Pages website under `Code`- `About` - `Settings icon` - `Website` - `Use your GitHub Pages Website`
 
-![GitHub pages as website](figures/use_github_pages_website.png)
+![GitHub pages as website](https://github.com/TeachBooks/template_figures/blob/main/use_github_pages_website.png?raw=true)
 
 ## Features
 - A github repository structure for making a [Jupyter Book](https://github.com/executablebooks/jupyter-book) (`/book`)

@@ -4,7 +4,7 @@
 
 With the exercises, you did all the steps of our TeachBooks workflow!
 
-```{figure} ../figures/TeachBooks_flowchart.svg
+```{figure} https://github.com/TeachBooks/logos_and_visualisations/blob/main/TB_flowchart/TeachBooks_flowchart.svg?raw=true
 ---
 width: 500px
 align: center
