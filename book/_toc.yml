@@ -8,6 +8,7 @@ parts:
       sections:
       - file: some_content/text_and_code.ipynb
     - file: exercises
+      caption: Beginner exercises
       sections:
       - file: exercises/001.md
       - file: exercises/002.md
@@ -16,6 +17,15 @@ parts:
       - file: exercises/005.md
       - file: exercises/006.md
       - file: exercises/summary
+    - file: advances_exercises.md
+      caption: Advanced exercises
+      sections:
+      - file: user_type_3.md
+        sections:
+        - file: exercises/007.md
+#       - file: exercises/...
+#     - file: user_type_4.md
+#     etc.
     - file: references.md
     - file: changelog.md
     - file: credits.md
