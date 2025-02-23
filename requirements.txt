@@ -5,7 +5,7 @@ sphinx-image-inverter
 download_link_replacer
 sphinx-exercise
 teachbooks-sphinx-tippy
+sphinx-iframes
 
-# Now list the files you want to download directly from GitHub
+# Now list the packages you want to download directly from GitHub
 git+https://github.com/TeachBooks/Sphinx-Thebe
-git+https://github.com/TeachBooks/sphinx-iframes.git
