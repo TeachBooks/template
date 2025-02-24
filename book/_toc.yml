@@ -18,10 +18,13 @@ parts:
       - file: exercises/summary
     - file: exercises/advanced_exercises.md
       sections:
-      - file: type3.md
+      - file: exercises/type3.md
         sections:
         - file: exercises/007.md
         - file: exercises/008.md
+      - file: exercises/type4.mb
+        sections:
+        - file: exercises/009.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
