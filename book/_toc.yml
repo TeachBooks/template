@@ -25,6 +25,7 @@ parts:
       - file: exercises/type4.mb
         sections:
         - file: exercises/009.md
+        - file: exercises/010.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
