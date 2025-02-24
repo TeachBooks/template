@@ -1,1 +1,4 @@
 # User type 4
+
+
+User 4 is a hybrid between type 3 and 5. Basically this user is making changes by editing the .md files locally using, for example, VS Code. Therefore, this user requires a little bit more knowledge on git (think of pulling and pushing changes) but their main focus remains to make adjustments to the content of the book by editing .md files whereas user type 5 has more knowledge to make changes to python files the book as well. This user can build the book online and therefore does not need to have special software installed besides a text editor (e.g., Python is not required). Using this skills, this user type can take the role as editor, managing more than just book content.
