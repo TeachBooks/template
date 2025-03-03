@@ -22,7 +22,7 @@ parts:
         sections:
         - file: exercises/007.md
         - file: exercises/008.md
-      - file: exercises/type4.mb
+      - file: exercises/type4.md
         sections:
         - file: exercises/009.md
         - file: exercises/010.md

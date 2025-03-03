@@ -4,6 +4,5 @@ Now that you've made your own version of the book, it's time to add some content
 
 Exercises for user type 3 relate to:
 
-- File Structure (Markdown)
-- In-text referencing
-- Adding a figure
+- [File structure (Markdown)](007.md)
+- [Adding visual media](008.md)
