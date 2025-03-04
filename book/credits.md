@@ -24,10 +24,10 @@ This manual is [CC BY 4.0 licensed](https://creativecommons.org/licenses/by/4.0/
 Parts of this book are taken from other external resources and reused in various ways. If an author is not listed on a particular page, it is by the Authors, except as follows:
 
 The following pages are included directly from an external resource and is not edited by `<Editor>`:
-- page [](). Original content licensed under CC BY 4.0 License
+- page `[](<relative_link_to_page>)`. Original content licensed under CC BY 4.0 License
 
 The following pages contain content written by others, part of has been reused and/or modified by `<Editor>`
-- Page []() include text from {cite:t}`jason_moore`. Original content licensed under CC BY. 
+- Page `[](<relative_link_to_page>)` include text from {cite:t}`jason_moore`. Original content licensed under CC BY. 
 
 
 (editor)=
