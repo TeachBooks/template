@@ -16,16 +16,11 @@ parts:
       - file: exercises/005.md
       - file: exercises/006.md
       - file: exercises/summary
-    - file: exercises/advanced_exercises.md
+    - file: exercises/syntax_exercises.md
       sections:
-      - file: exercises/type3.md
-        sections:
-        - file: exercises/007.md
-        - file: exercises/008.md
-      - file: exercises/type4.md
-        sections:
-        - file: exercises/009.md
-        - file: exercises/010.md
+      - file: syntax_exercises/007.md
+      - file: syntax_exercises/008.md
+      - file: syntax_exercises/009.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
