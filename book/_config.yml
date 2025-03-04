@@ -40,6 +40,7 @@ sphinx:
     - download_link_replacer
     - sphinx.ext.extlinks
     - sphinx_image_inverter
+    - sphinx_iframes
     - sphinx_exercise
     - sphinx_tudelft_theme
     - teachbooks_sphinx_tippy
