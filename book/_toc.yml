@@ -7,7 +7,7 @@ parts:
     - file: some_content/overview.md
       sections:
       - file: some_content/text_and_code.ipynb
-    - file: exercises/exercises.md
+    - file: exercises.md
       sections:
       - file: exercises/001.md
       - file: exercises/002.md
@@ -16,7 +16,7 @@ parts:
       - file: exercises/005.md
       - file: exercises/006.md
       - file: exercises/summary
-    - file: exercises/syntax_exercises.md
+    - file: syntax_exercises.md
       sections:
       - file: syntax_exercises/007.md
       - file: syntax_exercises/008.md
