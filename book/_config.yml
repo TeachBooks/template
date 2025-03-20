@@ -1,51 +1,48 @@
-Title: TeachBooks template
+title: TeachBooks template #Replace this with your own book title
 author: TeachBooks Team, built with <a href="https://teachbooks.io">TeachBooks</a> and <a href="https://jupyterbook.org/">Jupyter Book</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a> #add your own name here
 
 execute:
-  execute_notebooks: "off"
+  execute_notebooks: "off" #replace this if you want don't have notebooks with output and you want to add notebook output during build
 
-only_build_toc_files: true
-
-html:
-  favicon : "figures/TB_favicon.ico"
-  baseurl :  "https://teachbooks.io/" #Replace this with your own URL
+only_build_toc_files: true #replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents
 
 sphinx:
   config:
     html_js_files:
-    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js
+    - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js #required for live code: https://teachbooks.io/manual/features/live_code.html
     thebe_config:
-      use_thebe_lite: true
-      exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"]
+      use_thebe_lite: true #required for live code: https://teachbooks.io/manual/features/live_code.html
+      exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"] #exclude files which should not be accessible for live code: https://teachbooks.io/manual/features/live_code.html
     html_theme_options:
       logo:
-        text: Template
+        text: Template #Replace this with your own book title
         image_light: TeachBooks_logo.svg # Put your logo for the light mode here (can be the same as image_dark)
         image_dark: TeachBooks_logo_inverted.svg # Put your logo for the dark mode here (can be the same as image_light)
       repository_url: "https://github.com/user/repo" #add your own repo URL here
-      path_to_docs: "book"
-      repository_branch: "main"
-      use_edit_page_button: true
-      use_repository_button: true
-      use_issues_button : true
+      path_to_docs: "book" #required for edit_page_button, should be book if you're using TeachBooks package (https://github.com/TeachBooks/TeachBooks) or the TeachBooks deploy book workflow (https://teachbooks.io/manual/external/deploy-book-workflow/README.html)
+      repository_branch: "main" #replace when you change the name of your published branch (required for edit_page_button)
+      use_edit_page_button: true #replace with false if you don't want the edit page button (i.e. if you don't user to propose changes themselves or have a private repo)
+      use_repository_button: true #replace with false if you don't want the repository button (i.e. if you have a private repo)
+      use_issues_button : true #replace with false if you don't want the issues button (i.e. if you don't want to use GitHub issues or have a private repo)
       launch_buttons:
-        thebe: true
-    html_show_copyright: false
-    html_last_updated_fmt: '%B %-d, %Y'
+        thebe: true #required for live code: https://teachbooks.io/manual/features/live_code.html
+      favicon : "figures/TB_favicon.ico" #replace this with your own favicon
+      baseurl :  "https://teachbooks.io/" #Replace this with your own URL
+    html_show_copyright: false #as the copyright is included in the author field
+    html_last_updated_fmt: '%B %-d, %Y' #adds the date of the last update to the footer
     html_static_path: ["figures"] # add folders that contain files that need to be included, such as the location of the logo(s)
     mathjax3_config:
       chtml: {
         mtextInheritFont: true # To typeset text within math prettier
       }
-  extra_extensions:
-    - sphinx.ext.imgconverter
-    - jupyterbook_patches
-    - download_link_replacer
-    - sphinx.ext.extlinks
-    - sphinx_image_inverter
-    - sphinx_iframes
-    - sphinx_exercise
-    - teachbooks_sphinx_tippy
+  extra_extensions: #Gives you a starter package of extensions to use in your book
+    - jupyterbook_patches # Patches by TeachBooks https://github.com/TeachBooks/JupyterBook-Patches
+    - download_link_replacer # Allows you to replace and add downloadable files to a page header https://teachbooks.io/manual/external/Download-Link-Replacer/README.html
+    - sphinx_image_inverter # Inverts images for dark mode https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html
+    - sphinx_iframes # Eases the embedding of iframes https://teachbooks.io/manual/external/sphinx-iframes/README.html
+    - sphinx_exercise # Allows you to add exercise boxes to your book https://ebp-sphinx-exercise.readthedocs.io/en/latest/
+    - teachbooks_sphinx_tippy # Enables hoover over tips https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html
+    - sphinx_named_colors # Allows you to use custom colors in your book https://teachbooks.io/manual/external/Sphinx-Named-Colors/README.html
 
 bibtex_bibfiles: 
-  - references.bib
+  - references.bib #required for references
