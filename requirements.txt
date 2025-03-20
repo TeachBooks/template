@@ -7,6 +7,7 @@ sphinx-exercise
 sphinx-tudelft-theme
 teachbooks-sphinx-tippy
 sphinx-iframes
+sphinx-named-colors
 
 # Now list the packages you want to download directly from GitHub
 git+https://github.com/TeachBooks/Sphinx-Thebe
