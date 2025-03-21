@@ -20,6 +20,7 @@ parts:
       sections:
       - file: syntax_exercises/007.md
       - file: syntax_exercises/008.md
+      - file: syntax_exercises/009.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
