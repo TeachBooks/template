@@ -28,7 +28,7 @@ sphinx:                                              # Options passed on to the 
       launch_buttons:
         thebe: true                                  # Required for live code: https://teachbooks.io/manual/features/live_code.html
       favicon : "figures/TB_favicon.ico"             # Replace this with your own favicon
-      baseurl :  "https://teachbooks.io/"            # Replace this with your own URL
+      baseurl :  "https://<user/org>.io/<repo>"      # Replace this with your own URL
     html_show_copyright: false                       # As the copyright is included in the author field
     html_last_updated_fmt: '%B %-d, %Y'              # Adds the date of the last update to the footer
     html_static_path: ["figures"]                    # Add folder that contain files that need to be included, such as the location of the logo(s)
