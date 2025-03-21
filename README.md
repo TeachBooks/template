@@ -34,25 +34,23 @@ Demonstration for a public repository, video available [here](https://youtu.be/n
 :name: create_new_repository
 ```
 
-3. You can choose for `Private` only if you've GitHub Pro, GitHub Team, GitHub Enterprise Cloud, or GitHub Enterprise Server. Otherwise, you won't be able to publish your TeachBook online. Furthermore, it prevents people from contributing to your book, making your book essentially 'closed' instead of 'open.
+3. You can choose for `Private` only if you've GitHub Pro, GitHub Team, GitHub Enterprise Cloud, or GitHub Enterprise Server. Otherwise, you won't be able to publish your TeachBook online. Furthermore, it prevents people from contributing to your book, making your book essentially 'closed' instead of 'open'. Note that the built book website is always public.
 
-4. (Only required for private repositories:) Create a Personal Access Token (classic) with at least the scopes `repo`, `read:org` and `gist` as described in the [github documentation](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens), and add this token with the name `GH_PAT` as a `Repository secret` or `Organization secret` ({octicon}`gear;1em` `Settings` - {octicon}`key-asterisk;1em` `Secrets and variables` - `Actions` - `Repository secrets` or `Organization secrets`).
-
-5. You need to activate GitHub pages so that your website is published to the internet. As long as you don't do this your TeachBook is not published online. Actually, now that you've taken this template our workflow tries to publish it to GitHub pages, which you didn't have the chance to activate yet. That's why you probably received an email with 'call-deploy-book: Some jobs were not successful' and you see the failed job under {octicon}`play;1em` `Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit`. You can activate GitHub pages by setting the source for GitHub pages to GitHub Actions under {octicon}`gear;1em` `Settings` - {octicon}`browser;1em` `Pages` - `Build and deployment` - `Source` - `GitHub Actions`:
+4. You need to activate GitHub pages so that your website is published to the internet. As long as you don't do this your TeachBook is not published online. Actually, now that you've taken this template our workflow tries to publish it to GitHub pages, which you didn't have the chance to activate yet. That's why you probably received an email with 'call-deploy-book: Some jobs were not successful' and you see the failed job under {octicon}`play;1em` `Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit`. You can activate GitHub pages by setting the source for GitHub pages to GitHub Actions under {octicon}`gear;1em` `Settings` - {octicon}`browser;1em` `Pages` - `Build and deployment` - `Source` - `GitHub Actions`:
 
 ```{figure} https://github.com/TeachBooks/template_figures/blob/main/set_up_pages.png?raw=true
 :name: activate_pages
 ```
 
-6. Make an edit to the TeachBook by editing and committing changes to one of the files in the `book/` subdirectory (available under {octicon}`code;1em` `Code`).  Now checkout the progress of the publishing workflow under {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. Remember, the first commit which is there has failed because GitHub Pages wasn't activated at the time of `Initial commit`, you could also re-run that job if you don't want to make an edit. You can do so by running the workflow from {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit` - {octicon}`sync;1em` `Re-run all jobs` - `Re-run jobs`:
+5. Make an edit to the TeachBook by editing and committing changes to one of the files in the `book/` subdirectory (available under {octicon}`code;1em` `Code`).  Now checkout the progress of the publishing workflow under {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. Remember, the first commit which is there has failed because GitHub Pages wasn't activated at the time of `Initial commit`, you could also re-run that job if you don't want to make an edit. You can do so by running the workflow from {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit` - {octicon}`sync;1em` `Re-run all jobs` - `Re-run jobs`:
 
 ```{figure} https://github.com/TeachBooks/template_figures/blob/main/action_re-run.jpeg?raw=true
 :name: action
 ```
 
-7. When the workflow has finished, visit your build TeachBook at `https://<username or organiszation_name>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository. These links are visible in the action's summary as well, as shown in the figure of step 4.
+6. When the workflow has finished, visit your build TeachBook at `https://<username or organiszation_name>.github.io/<repository_name>` (case sensitive). For our example it is [https://dummydocent.github.io/test_book_from_template/](https://dummydocent.github.io/test_book_from_template/) for the shown repository. These links are visible in the action's summary as well, as shown in the figure of step 4.
 
-8. Want to get started directly? Your book contains a few exercises to get your started! Visit `https://<username or organiszation_name>.github.io/<repository_name>/exercises/exercises` (case sensitive) to get started with the first ones to get the basics of how to interact with your book on GitHub.
+7. Want to get started directly? Your book contains a few exercises to get your started! Visit `https://<username or organiszation_name>.github.io/<repository_name>/exercises/exercises` (case sensitive) to get started with the first ones to get the basics of how to interact with your book on GitHub.
 
 ```{figure} https://github.com/TeachBooks/template_figures/blob/main/exercises.png?raw=true
 :name: github_pages_as_website
