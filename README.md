@@ -53,7 +53,7 @@ Demonstration for a public repository, video available [here](https://youtu.be/n
 7. Want to get started directly? Your book contains a few exercises to get your started! Visit `https://<username or organiszation_name>.github.io/<repository_name>/exercises/exercises` (case sensitive) to get started with the first ones to get the basics of how to interact with your book on GitHub.
 
 ```{figure} https://github.com/TeachBooks/template_figures/blob/main/exercises.png?raw=true
-:name: github_pages_as_website
+:name: exercises_in_template
 :width: 200px
 ```
 Additional tip: 
