@@ -2,13 +2,13 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-message: "If you use this Book, please cite it using these metadata."
+message: 'If you use this Book, please cite it using these metadata.'
 preferred-citation:
   type: book
   authors: #replace with your own name(s) if you use this template
   - email: info@teachbooks.io
-    name: "TeachBooks Development Team"
-    website: "https://teachbooks.io/"
+    name: 'TeachBooks Development Team'
+    website: 'https://teachbooks.io/'
 #  - given-names: Tom
 #    name-particle: van
 #    family-names: Woudenberg
@@ -19,10 +19,10 @@ preferred-citation:
   identifiers:
     - type: url
       value: 'https://teachbooks.github.io/template/' # replace with your own URL when you use this template
-      description: Published book on GitHub Pages
+      description: 'Published book on GitHub Pages'
     - type: url
       value: 'https://github.com/TeachBooks/template' # replace with your own URL when you use this template
-      description: GitHub repository
+      description: 'GitHub repository'
   abstract: >- # replace with your own abstract when you use this template
     The template allows you to start your own TeachBook and
     hosting that TeachBook online without knowledge on Git,
@@ -32,7 +32,7 @@ preferred-citation:
   keywords: # replace with your own keywords when you use this template
     - TeachBooks
     - Template
-    - Jupyter Book
+    - 'Jupyter Book'
   title: 'TeachBooks Template' # replace with your own book title when you use this template
   institution:
     name: 'TeachBooks' # replace with your own institution when you use this template
@@ -43,4 +43,4 @@ preferred-citation:
     - en # replace with your book language when you use this template
   contact: # replace with your own contact information when you use this template
   - email: info@teachbooks.io
-    name: "TeachBooks Development Team"
+    name: 'TeachBooks Development Team'
