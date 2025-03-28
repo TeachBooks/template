@@ -2,7 +2,12 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
-message: 'If you use this Book, please cite it using these metadata.'
+title: 'TeachBooks Template' # replace with your own book title when you use this template
+authors: #replace with your own name(s) if you use this template
+- email: info@teachbooks.io
+  name: 'TeachBooks Development Team'
+  website: 'https://teachbooks.io/'
+message: 'If you use this teachbook, please cite it using these metadata.'
 preferred-citation:
   type: book
   authors: #replace with your own name(s) if you use this template
