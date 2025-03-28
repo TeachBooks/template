@@ -2,9 +2,18 @@
 # Visit https://bit.ly/cffinit to generate yours today!
 
 cff-version: 1.2.0
+authors: #replace with your own name(s) if you use this template
+  - email: info@teachbooks.io
+    name: "TeachBooks Development Team"
+    website: "https://teachbooks.io/"
+message: "If you use this Book, please cite it using these metadata."
+title: "Source files TeachBooks Template" #replace with your own title when you use this template
 preferred-citation:
   type: book
   authors: #replace with your own name(s) if you use this template
+  - email: info@teachbooks.io
+    name: "TeachBooks Development Team"
+    website: "https://teachbooks.io/"
   - given-names: Tom
     name-particle: van
     family-names: Woudenberg
