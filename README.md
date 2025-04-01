@@ -1,6 +1,9 @@
 # TeachBooks template
 
-> This page reuses CC BY 4.0 licensed content from {cite:t}`template`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+```{attributiongrey} Attribution
+:class: attribution
+This page reuses CC BY 4.0 licensed content from {cite:t}`template`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
+```
 
 ```{admonition} User types
 :class: tip
