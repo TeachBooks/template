@@ -23,6 +23,7 @@ parts:
       - file: syntax_exercises/009.md
       - file: syntax_exercises/010.md
       - file: syntax_exercises/011.md
+      - file: syntax_exercises/012.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
