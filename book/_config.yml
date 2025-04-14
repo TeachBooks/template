@@ -7,6 +7,11 @@ execute:
 
 only_build_toc_files: true                           # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents
 
+
+html:
+  favicon : "figures/TB_favicon.ico"                 # Replace this with your own favicon
+  baseurl :  "https://<user/org>.io/<repo>"          # Replace this with your own URL
+
 sphinx:                                              # Options passed on to the underlying sphinx-parser
   config:
     html_js_files:
@@ -27,8 +32,6 @@ sphinx:                                              # Options passed on to the 
       use_issues_button : true                       # Replace with false if you don't want the issues button (i.e. if you don't want to use GitHub issues or have a private repo)
       launch_buttons:
         thebe: true                                  # Required for live code: https://teachbooks.io/manual/features/live_code.html
-      favicon : "figures/TB_favicon.ico"             # Replace this with your own favicon
-      baseurl :  "https://<user/org>.io/<repo>"      # Replace this with your own URL
     html_show_copyright: false                       # As the copyright is included in the author field
     html_last_updated_fmt: '%B %-d, %Y'              # Adds the date of the last update to the footer
     html_static_path: ["figures"]                    # Add folder that contain files that need to be included, such as the location of the logo(s)
