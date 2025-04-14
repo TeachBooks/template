@@ -1,4 +1,4 @@
-# TeachBooks template
+````{margin}
 
 ```{attributiongrey} Attribution
 :class: attribution
@@ -11,6 +11,9 @@ This page is useful for user type 3, 4 and 5.
 ```
 
 {bdg-light}`GitHub template`
+````
+
+# TeachBooks template
 
 The template allows you to start your own TeachBook and hosting that TeachBook online without knowledge on Git, the Jupyter book package, python or anaconda. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book. Please look at our manual (https://teachbooks.io/manual) to find more about that!
 
