@@ -17,7 +17,6 @@ parts:
       - file: exercises/005a.md
       - file: exercises/006.md
       - file: exercises/summary
-      - external: https://github.com/TeachBooks/manual/blob/v1.1.1/book/examples/overview.md
     - file: syntax_exercises.md
       sections:
       - file: syntax_exercises/007.md
