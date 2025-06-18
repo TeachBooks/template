@@ -14,6 +14,7 @@ parts:
       - file: exercises/003.md
       - file: exercises/004.md
       - file: exercises/005.md
+      - file: exercises/005a.md
       - file: exercises/006.md
       - file: exercises/summary
     - file: syntax_exercises.md

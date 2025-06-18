@@ -9,7 +9,8 @@ Maybe you're already comfortable with Git, GitHub and the concept of using softw
 3. Can you edit the repository url defined in the `_config.yml`, change the title shown below the logo and change the author as shown in the footer?
 4. Can you make a new branch of your book with an additional file `file_on_new_version.md` and view it online?
 5. Can you merge your branch into `main` with a pull request?
-6. Can you fork someone else's repo, and suggest a change in a pull request?
+6. Can you add read-only content from someone else without manually copying the source?
+7. Can you fork someone else's repo, and suggest a change in a pull request?
 
 If something is not clear, dive into to the relevant exercise page.
 ```
