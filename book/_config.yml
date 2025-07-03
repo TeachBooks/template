@@ -47,6 +47,7 @@ sphinx:                                              # Options passed on to the 
     - sphinx_exercise                                # Allows you to add exercise boxes to your book https://ebp-sphinx-exercise.readthedocs.io/en/latest/
     - teachbooks_sphinx_tippy                        # Enables hoover over tips https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html
     - sphinx_named_colors                            # Allows you to use custom colors in your book https://teachbooks.io/manual/external/Sphinx-Named-Colors/README.html
+    - sphinx_dropdown_toggle                         # Adds a button to toggle all dropdowns with one click
 
 bibtex_bibfiles: 
   - references.bib                                   # Required for references
