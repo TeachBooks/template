@@ -7,6 +7,7 @@ git+https://github.com/TeachBooks/sphinx-exercise #waiting for merge of https://
 teachbooks-sphinx-tippy
 sphinx-iframes
 sphinx-named-colors
+sphinx_dropdown_toggle
 git+https://github.com/TeachBooks/sphinx-togglebutton #waiting for merge of https://github.com/executablebooks/sphinx-togglebutton/pull/66, after, replace this line with `sphinx-dropdown-toggle`
 git+https://github.com/TeachBooks/sphinx-proof #waiting for merge of https://github.com/executablebooks/sphinx-proof/pull/146, after, replace this line with `sphinx-proof`
 sphinx-code-examples
