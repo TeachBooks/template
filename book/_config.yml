@@ -14,6 +14,7 @@ html:
 
 sphinx:                                              # Options passed on to the underlying sphinx-parser
   config:
+    language: en                                     # Defines language (English) of everything except the content itself. For Dutch: replace with `nl`
     html_js_files:
     - https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js # Required for live code: https://teachbooks.io/manual/features/live_code.html
     thebe_config:
