@@ -12,7 +12,6 @@ git+https://github.com/TeachBooks/sphinx-togglebutton #waiting for merge of http
 git+https://github.com/TeachBooks/sphinx-proof #waiting for merge of https://github.com/executablebooks/sphinx-proof/pull/146, after, replace this line with `sphinx-proof`
 sphinx-code-examples
 sphinx-accessibility
-teachbooks-sphinx-tippy
 
 # Now list the packages you want to download directly from GitHub
 git+https://github.com/TeachBooks/Sphinx-Thebe
