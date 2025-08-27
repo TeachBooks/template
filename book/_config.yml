@@ -52,6 +52,7 @@ sphinx:                                              # Options passed on to the 
     - sphinx_proof                                   # Allows you to add various mathy admonitions to your book: https://sphinx-proof.readthedocs.io/en/latest/
     - sphinx_code_examples                           # Allows you to include code blocks in examples: https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html
     - sphinx_accessibility                           # Allows dyslexic-friendly fonts and high contrast mode: https://teachbooks.io/manual/accessibility/_git/github.com_TeachBooks_Sphinx-Accessibility/manual/README.html
+    - teachbooks_sphinx_tippy                        # Adds rich hoover-over tips https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html
 
 
 bibtex_bibfiles: 
