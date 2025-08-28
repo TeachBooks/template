@@ -2,7 +2,4 @@
 teachbooks # depends on jupyter-book
 
 # Our favourite Sphinx extensions in one line, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
-git+https://github.com/TeachBooks/TeachBooks-Favourites
-
-# Now list the packages you want to download directly from GitHub
-git+https://github.com/TeachBooks/Sphinx-Thebe
+git+https://github.com/TeachBooks/TeachBooks-Favourites@add-sphinx-thebe
