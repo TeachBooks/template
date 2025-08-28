@@ -1,17 +1,8 @@
 # first list the packages you wish to download from PyPI
 teachbooks # depends on jupyter-book
-jupyterbook-patches
-sphinx-image-inverter
-download_link_replacer
-git+https://github.com/TeachBooks/sphinx-exercise #waiting for merge of https://github.com/executablebooks/sphinx-exercise/pull/75, after, replace this line with `sphinx-exercise`
-teachbooks-sphinx-tippy
-sphinx-iframes
-sphinx-named-colors
-sphinx_dropdown_toggle
-git+https://github.com/TeachBooks/sphinx-togglebutton #waiting for merge of https://github.com/executablebooks/sphinx-togglebutton/pull/66, after, replace this line with `sphinx-dropdown-toggle`
-git+https://github.com/TeachBooks/sphinx-proof #waiting for merge of https://github.com/executablebooks/sphinx-proof/pull/146, after, replace this line with `sphinx-proof`
-sphinx-code-examples
-sphinx-accessibility
+
+# Our favourite Sphinx extensions in one line, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
+git+https://github.com/TeachBooks/TeachBooks-Favourites
 
 # Now list the packages you want to download directly from GitHub
 git+https://github.com/TeachBooks/Sphinx-Thebe
