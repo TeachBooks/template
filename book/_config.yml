@@ -41,7 +41,7 @@ sphinx:                                              # Options passed on to the 
         mtextInheritFont: true                       # To typeset text within math prettier
       }
   extra_extensions:                                  
-    - teachbooks_favourites                          # Gives you a starter package of extensions to use in your book
+    - teachbooks_favourites                          # Gives you a starter package of extensions to use in your book, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
 
 bibtex_bibfiles: 
   - references.bib                                   # Required for references
