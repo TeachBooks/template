@@ -27,6 +27,9 @@ parts:
       - file: syntax_exercises/011.md
       - file: syntax_exercises/012.md
       - file: syntax_exercises/013.md
+    - file: live_exercises.md
+      sections:
+      - file: live_exercises/014.md
     - file: references.md
     - file: changelog.md
     - file: credits.md
