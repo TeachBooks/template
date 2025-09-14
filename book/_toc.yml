@@ -2,7 +2,7 @@ format: jb-book
 root: intro.md
 
 parts:
-  - caption: Some contents
+  - caption: Part with some content
     chapters:
     - file: some_content/overview.md
       sections:
