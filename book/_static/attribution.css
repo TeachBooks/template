@@ -1,0 +1,4 @@
+/* Set attribution admonition symbol, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html) */
+div.attribution > .admonition-title::after {
+  content: "\f10d";
+}
