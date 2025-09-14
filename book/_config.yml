@@ -1,9 +1,7 @@
-title: TeachBooks template                           # Replace this with your own book title
 author: TeachBooks Team, built with <a href="https://teachbooks.io">TeachBooks</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a>
-                                                     # Replace TeachBooks Teams with your own name in the line above
-
+                                                     # Replace TeachBooks Teams with your own name in the line above, configuratin part of JupyterBook: https://jupyterbook.org/en/stable/customize/config.html
 execute:
-  execute_notebooks: "off"                           # Replace this if you want don't have notebooks with output and you want to add notebook output during build
+  execute_notebooks: "off"                           # Replace this if you want don't have notebooks with output and you want to add notebook output during build, configuration part of jupyterbook: https://jupyterbook.org/en/stable/customize/config.html
 
 only_build_toc_files: true                           # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents
 
@@ -63,6 +61,19 @@ sphinx:                                              # Options passed on to the 
     togglebutton_hint:            "Click to show"                 # Default value (line can be removed), defines hint when toggle is closed, configuration part of https://sphinx-togglebutton.readthedocs.io/en/latest/use.html
     togglebutton_hint_hide:       "Click to hide"                 # Default value (line can be removed), defines hint when toggle is opened, configuration part of https://sphinx-togglebutton.readthedocs.io/en/latest/use.html
     togglebutton_open_on_print:   true                            # Default value (line can be removed), opens all toggle-able content when you print, configuration part of https://sphinx-togglebutton.readthedocs.io/en/latest/use.html
+    tippy_props: {"placement": "auto-start", "maxWidth": 500, "interactive": True, "boundary": "document.body", "appendTo": "document.body"} # Default value (line can be removed), sets tippy properties, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_add_class: null                            # Default value (line can be removed), adds a class name to all elements with tips, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_skip_urls: null                            # Default value (line can be removed), a list of URL regexes to skip, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_tip_selector: "figure, table, img, p, aside, div.admonition, div.literal-block-wrapper" # Default value (line can be removed), defines what elements tips are created for, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_skip_anchor_classes: ("headerlink", "sd-stretched-link",) # Default value (line can be removed), skips showing tooltips for anchors with these classes, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_anchor_parent_selector: null               # Default value (line can be removed), only show tool tips for anchors within this select, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_enable_wikitips: true                      # Default value (line can be removed), enables tooltips for wikipedia links, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_enable_doitips: true                       # Default value (line can be removed), enables tooltips for DOI links, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_doi_api: "https://api.crossref.org/works/" # Default value (line can be removed), sets the API to use for DOI tooltips, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    #tippy_doi_template                              # Default value not shown (line can be removed), sets the jinja template to use for formatting DOI data to tooltips, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_custom_tips: null                          # Default value (line can be removed), creates custom tips, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_enable_mathjax: true                       # Default value (line can be removed), enables tooltips for math equations, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
+    tippy_js: ("https://unpkg.com/@popperjs/core@2", "https://unpkg.com/tippy.js@6") # Default value (line can be removed), sets the Javascript required to enable tooltips, configuration part of https://sphinx-tippy.readthedocs.io/en/latest/#confval-tippy_props
   extra_extensions:                                  
     - teachbooks_favourites                          # Gives you a starter package of extensions to use in your book, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
 
