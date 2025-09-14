@@ -14,8 +14,6 @@ execute:
 only_build_toc_files: true                           # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents, configuration part of jupyterbook: https://jupyterbook.org/en/stable/customize/config.html
 
 html:
-  favicon: "figures/TB_favicon.ico"                 # Replace this with your own favicon, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
-  baseurl:  "https://<user/org>.io/<repo>"          # Replace this with your own URL, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
   use_multitoc_numbering    : true                  # Default value (line can be removed), sets continuous numbering across parts/chapters, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
   extra_footer              : ""                    # Default value (line can be removed), sets text to be displayed underneath the footer, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
 
@@ -30,6 +28,8 @@ sphinx:                                              # Options passed on to the 
     thebe_config:
       use_thebe_lite: true                           # Required for live code, part of TeachBooks-Sphinx-Thebe (https://teachbooks.io/manual/features/live_code.html)
       exclude_patterns: ["**/_*.yml", "**/*.md", "**/*.ipynb"] #exclude files which should not be accessible for live code, configuration part of TeachBooks-Sphinx-Thebe (https://teachbooks.io/manual/features/live_code.html)
+    html_favicon: "figures/TB_favicon.ico"           # Replace this with your own favicon, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+    html_baseurl:  "https://<user/org>.io/<repo>"    # Replace this with your own URL, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_theme_options:
       logo:
         text:        Template                        # Replace this with your own book title, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
@@ -51,6 +51,7 @@ sphinx:                                              # Options passed on to the 
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       }
+    bibtex_bibfiles: references.bib                  # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     patch_config:
       disabled-patches: []                           # Default value (line can be removed), disables specific patches, configuration part of JupyterBook-Patches (https://teachbooks.io/manual/external/JupyterBook-Patches/README.html)
     inverter_all:        true                        # Default value (line can be removed), inverts all figures, configuration part of Sphinx-Image-Inverter (https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html)
@@ -93,9 +94,6 @@ sphinx:                                              # Options passed on to the 
 teachbooks:
   attribution_location: top                          # Default value (line can be removed), sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
   attribution_color: null                            # Default value (line can be removed), uses blue colour for attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
-
-bibtex_bibfiles: 
-  - references.bib                                   # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
 
 # Parse and render settings
 parse:
