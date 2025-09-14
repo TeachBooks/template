@@ -54,7 +54,7 @@ sphinx:                                              # Options passed on to the 
     named_colors_include_CSS:    true                # Default value (line can be removed), includes all CSS colours, configuration part of Sphinx-Named-Colors (https://teachbooks.io/manual/external/Sphinx-Named-Colors/README.html)
     named_colors_dark_and_light: true                # Default value (line can be removed), creates dark mode colours for CSS and custom named colours, configuration part of Sphinx-Named-Colors (https://teachbooks.io/manual/external/Sphinx-Named-Colors/README.html)
     named_colors_saturation:     1.5                 # Default value (line can be removed), sets saturation of CSS and custom named colours in dark mode to 1.5, configuration part of Sphinx-Named-Colors (https://teachbooks.io/manual/external/Sphinx-Named-Colors/README.html)
-    named_colors_custom_colors:  None                # Default value (line can be removed), defines no custom named colours (include no colour for attribution admonition of external pages), configuration part of Sphinx-Named-Colors (https://teachbooks.io/manual/external/Sphinx-Named-Colors/README.html)
+    named_colors_custom_colors:  null                # Default value (line can be removed), defines no custom named colours (include no colour for attribution admonition of external pages), configuration part of Sphinx-Named-Colors (https://teachbooks.io/manual/external/Sphinx-Named-Colors/README.html)
     proof_minimal_theme: false                       # Default value (line can be removed), uses default color scheme for admonitions part of sphinx-proof, configuration part of Sphinx-Proof (https://sphinx-proof.readthedocs.io/en/latest/options.html)
     sphinx_codex_name:                 ""            # Default value (line can be removed), uses default 'Code example' as title for codex directives, configuration part of Sphinx-Code-Examples (https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html)
     sphinx_codex_style_from_proof:     true          # Default value (line can be removed), the CSS color style of the codex directive will be taken from the prf:example directive from the sphinx-proof extension, configuration part of Sphinx-Code-Examples (https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html)
@@ -69,7 +69,7 @@ sphinx:                                              # Options passed on to the 
 
 teachbooks:
   attribution_location: top                          # Default value (line can be removed), sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
-  attribution_color: None                            # Default value (line can be removed), uses blue colour for attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
+  attribution_color: null                            # Default value (line can be removed), uses blue colour for attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
 
 bibtex_bibfiles: 
   - references.bib                                   # Required for references
