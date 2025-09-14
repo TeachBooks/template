@@ -51,7 +51,6 @@ sphinx:                                              # Options passed on to the 
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       }
-    bibtex_bibfiles: "./references.bib"                # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     patch_config:
       disabled-patches: []                           # Default value (line can be removed), disables specific patches, configuration part of JupyterBook-Patches (https://teachbooks.io/manual/external/JupyterBook-Patches/README.html)
     inverter_all:        true                        # Default value (line can be removed), inverts all figures, configuration part of Sphinx-Image-Inverter (https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html)
@@ -94,6 +93,9 @@ sphinx:                                              # Options passed on to the 
 teachbooks:
   attribution_location: top                          # Default value (line can be removed), sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
   attribution_color: null                            # Default value (line can be removed), uses blue colour for attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
+
+bibtex_bibfiles: 
+  - references.bib                                   # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
 
 # Parse and render settings
 parse:
