@@ -2,11 +2,13 @@ format: jb-book
 root: intro.md
 
 parts:
-  - caption: Contents
+  - caption: Part with some content
     chapters:
     - file: some_content/overview.md
       sections:
       - file: some_content/text_and_code.ipynb
+  - caption: Exercises
+    chapters:
     - file: exercises.md
       sections:
       - file: exercises/001.md
@@ -30,6 +32,8 @@ parts:
       sections:
       - file: exercises/007.md
       - file: extension_exercises/014.md
+  - caption: Miscellaneous
+    chapters:
     - file: references.md
     - file: changelog.md
     - file: credits.md
