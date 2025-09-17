@@ -51,6 +51,7 @@ sphinx:                                              # Options passed on to the 
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       }
+    keep_warnings: false                             # Default value (line can be removed), disables showing warnings in the book, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-keep_warnings)
     patch_config:
       disabled-patches: []                           # Default value (line can be removed), disables specific patches, configuration part of JupyterBook-Patches (https://teachbooks.io/manual/external/JupyterBook-Patches/README.html)
     inverter_all:        true                        # Default value (line can be removed), inverts all figures, configuration part of Sphinx-Image-Inverter (https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html)
