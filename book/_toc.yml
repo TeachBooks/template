@@ -18,7 +18,6 @@ parts:
       - file: exercises/005.md
       - file: exercises/005a.md
       - file: exercises/006.md
-      - file: exercises/007.md
       - file: exercises/summary
     - file: syntax_exercises.md
       sections:
@@ -29,6 +28,10 @@ parts:
       - file: syntax_exercises/011.md
       - file: syntax_exercises/012.md
       - file: syntax_exercises/013.md
+    - file: extensions.md
+      sections:
+      - file: exercises/007.md
+      - file: extension_exercises/014.md
   - caption: Miscellaneous
     chapters:
     - file: references.md
