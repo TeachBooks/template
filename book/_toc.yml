@@ -32,6 +32,7 @@ parts:
       sections:
       - file: exercises/007.md
       - file: extension_exercises/014.md
+      - file: extension_exercises/015.md
   - caption: Miscellaneous
     chapters:
     - file: references.md
