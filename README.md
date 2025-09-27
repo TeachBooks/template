@@ -11,9 +11,9 @@ This page is useful for user type 3, 4 and 5.
 ```
 
 {bdg-light}`GitHub template`
-{bdg-link-secondary}`Uses TeachBooks package <https://teachbooks.io/manual/favourites/features/teachbooks_intro.html>`
-{bdg-link-light}`Includes TeachBooks Favourites <https://teachbooks.io/manual/favourites/features/favourites.html>`
-{bdg-link-light}`Uses Deploy Book workflow <https://teachbooks.io/manual/favourites/external/deploy-book-workflow/README.html>`
+{bdg-link-secondary}`Uses TeachBooks package <https://teachbooks.io/manual/features/teachbooks_intro.html>`
+{bdg-link-primary-line}`Includes TeachBooks Favourites <https://teachbooks.io/manual/features/favourites.html>`
+{bdg-link-light}`Uses Deploy Book workflow <https://teachbooks.io/manual/external/deploy-book-workflow/README.html>`
 ````
 
 # TeachBooks template
