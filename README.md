@@ -11,14 +11,11 @@ This page is useful for user type 3, 4 and 5.
 ```
 
 {bdg-light}`GitHub template`
-{bdg-link-secondary}`Uses TeachBooks package <https://teachbooks.io/manual/features/teachbooks_intro.html>`
-{bdg-link-primary-line}`Includes TeachBooks Favourites <https://teachbooks.io/manual/features/favourites.html>`
-{bdg-link-light}`Uses Deploy Book workflow <https://teachbooks.io/manual/external/deploy-book-workflow/README.html>`
-````
+{bdg-link-secondary}`Uses TeachBooks package <../../features/teachbooks_intro.html>`
+{bdg-link-primary-line}`Includes TeachBooks Favourites <../../features/favourites.html>`
+{bdg-link-light}`Uses Deploy Book workflow <../deploy-book-workflow/README.html>`
 
-# TeachBooks template
-
-The template allows you to start your own TeachBook and hosting that TeachBook online without knowledge on Git, the Jupyter book package, python or anaconda. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book. Please look at our manual (https://teachbooks.io/manual) to find more about that!
+The template allows you to start your own TeachBook and hosting that TeachBook online without knowledge on Git, the Jupyter book package, python or anaconda. It doesn't elaborate on the collaborative functionalities of Git or how to edit the book.
 
 ## How to get started
 
@@ -78,7 +75,7 @@ Set the repository website as your GitHub Pages website under {octicon}`code;1em
 - A file ready for adding references (`references.bib`, `/book/references.md`)
 - An example favicon (web browser icon) (`/book/figures/favicon.ico`, `book/_config.yml`.)
 - An example logo (`/book/figures/TUDelft_logo_rgb.png`, `/book/config.yml`)
-- The configuration files set ready to make your Jupyter Notebooks pages work with [live code using our sphinx-thebe extension](https://teachbooks.io/manual/features/live_code.html) and our recommended settings (`/book/config.yml`)
+- The configuration files set ready to make your Jupyter Notebooks pages work with [live code using our sphinx-thebe extension](../../features/live_code.md) and our recommended settings (`/book/config.yml`)
 - An example of setting up preprocessing your table of contents to hide certain draft chapters for eg. students (`_toc.yml`)
 - A file containing all the recommended software packages (`requirements.txt`)
 - A file containing the recommended license CC BY 4.0 (`LICENSE.md`)
@@ -87,4 +84,4 @@ Set the repository website as your GitHub Pages website under {octicon}`code;1em
 - A readme containing information how to use the template, which can adjusted after using the template (`README.md`)
 
 ## Contribute
-This tool's repository is stored on [GitHub](https://github.com/TeachBooks/template). The `README.md` of the branch `manual_description` is also part of the [TeachBooks manual](https://teachbooks.io/manual/external/template/README.html) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/template). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
+This tool's repository is stored on [GitHub](https://github.com/TeachBooks/template). The `README.md` of the branch `manual_description` is also part of the TeachBooks manual (this file) as a submodule. If you'd like to contribute, you can create a fork and open a pull request on the [GitHub repository](https://github.com/TeachBooks/template). To update the `README.md` shown in the TeachBooks manual, create a fork and open a merge request for the [GitHub repository of the manual](https://github.com/TeachBooks/manual). If you intent to clone the manual including its submodules, clone using: `git clone --recurse-submodulesgit@github.com:TeachBooks/manual.git`.
