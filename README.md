@@ -79,7 +79,7 @@ Set the repository website as your GitHub Pages website under {octicon}`code;1em
 - A file ready for adding references (`references.bib`, `/book/references.md`)
 - An example favicon (web browser icon) (`/book/figures/favicon.ico`, `book/_config.yml`.)
 - An example logo (`/book/figures/TUDelft_logo_rgb.png`, `/book/config.yml`)
-- The configuration files set ready to make your Jupyter Notebooks pages work with [live code using our sphinx-thebe extension](../../features/live_code.md) and our recommended settings (`/book/config.yml`)
+- The configuration files set ready to make your Jupyter Notebooks pages work with [live code using our sphinx-thebe extension](../../features/live_code.ipynb) and our recommended settings (`/book/config.yml`)
 - An example of setting up preprocessing your table of contents to hide certain draft chapters for eg. students (`_toc.yml`)
 - A file containing all the recommended software packages (`requirements.txt`)
 - A file containing the recommended license CC BY 4.0 (`LICENSE.md`)
