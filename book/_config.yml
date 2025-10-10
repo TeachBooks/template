@@ -90,6 +90,8 @@ sphinx:                                              # Options passed on to the 
     #tippy_custom_tips                               # Default value not shown (line can be removed), creates custom tips, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
     tippy_enable_mathjax: true                       # Default value (line can be removed), enables tooltips for math equations, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
     #tippy_js                                        # Default value not shown (line can be removed), sets the Javascript required to enable tooltips, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
+    new_tab_link_show_external_link_icon: true       # Recommended value, false is default value, adds icon to external links, configuration part of sphinx-new-tab-link (https://pypi.org/project/sphinx-new-tab-link/)
+    new_tab_link_enable_referrer: false              # Default value (line can be removed), when set to false, prevents the target site from getting information about where the hyperlink was clicked, configuration part of sphinx-new-tab-link (https://pypi.org/project/sphinx-new-tab-link/)
 
 teachbooks:
   attribution_location: top                          # Default value (line can be removed), sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
