@@ -34,6 +34,7 @@ parts:
       - file: extension_exercises/014.md
       - file: extension_exercises/015.md
       - file: extension_exercises/016.md
+      - file: extension_exercises/017.md
   - caption: Miscellaneous
     chapters:
     - file: references.md
