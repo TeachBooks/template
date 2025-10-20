@@ -10,11 +10,9 @@ execute:
   run_in_temp:       false                           # Default value (line can be removed), disables a temporary directory was the command working directory (cwd), configuration part Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
   allow_errors:      false                           # Default value (line can be removed), all cells are always run, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
   stderr_output:     show                            # Default value (line can be removed), shows stderr output, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
-  
-only_build_toc_files: true                           # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents, configuration part of jupyterbook: https://jupyterbook.org/en/stable/customize/config.html
 
 html:
-  use_multitoc_numbering    : true                  # Default value (line can be removed), sets continuous numbering across parts/chapters, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
+  use_multitoc_numbering    : true                  # Default value (line can be removed), sets continuous numbering across parts/chapters, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html). Same functionality per section can be defined with sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
   extra_footer              : ""                    # Default value (line can be removed), sets text to be displayed underneath the footer, configuration part of Jupyter Book (https://jupyterbook.org/en/stable/customize/config.html)
 
 sphinx:                                              # Options passed on to the underlying sphinx-parser
@@ -52,6 +50,8 @@ sphinx:                                              # Options passed on to the 
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       }
     keep_warnings: false                             # Default value (line can be removed), disables showing warnings in the book, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-keep_warnings)
+    external_toc_exclude_missing: true               # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents, configuration part of jupyterbook, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
+    external_toc_path: "_toc.yml"                    # Default value (line can be removed), sets path to the table of contents file, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     patch_config:
       disabled-patches: []                           # Default value (line can be removed), disables specific patches, configuration part of JupyterBook-Patches (https://teachbooks.io/manual/external/JupyterBook-Patches/README.html)
     inverter_all:        true                        # Default value (line can be removed), inverts all figures, configuration part of Sphinx-Image-Inverter (https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html)
@@ -72,8 +72,8 @@ sphinx:                                              # Options passed on to the 
     sphinx_codex_style_from_proof:     true          # Default value (line can be removed), the CSS color style of the codex directive will be taken from the prf:example directive from the sphinx-proof extension, configuration part of Sphinx-Code-Examples (https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html)
     sphinx_codex_icon_from_proof:      false         # Default value (line can be removed), the icon of the codex directive will not be taken from the prf:example directive from the sphinx-proof extension, configuration part of Sphinx-Code-Examples (https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html)
     sphinx_codex_merge_with_proof:     false         # Default value (line can be removed), the codex directive will not be merged with the prf:example directive from the sphinx-proof extension, configuration part of Sphinx-Code-Examples (https://teachbooks.io/manual/_git/github.com_TeachBooks_sphinx-code-examples/main/MANUAL.html)
-    togglebutton_hint:            "Click to show"    # Default value (line can be removed), defines hint when toggle is closed, configuration part of Sphinx-Togglebutton (https://sphinx-togglebutton.readthedocs.io/en/latest/use.html)
-    togglebutton_hint_hide:       "Click to hide"    # Default value (line can be removed), defines hint when toggle is opened, configuration part of Sphinx-Togglebutton (https://sphinx-togglebutton.readthedocs.io/en/latest/use.html)
+    #togglebutton_hint: "Click to show"              # Displayed when the toggle is closed, overrides translated hint, configuration part of Sphinx-Togglebutton (https://sphinx-togglebutton.readthedocs.io/en/latest/use.html)
+    #togglebutton_hint_hide: "Click to hide"         # Displayed when the toggle is opened, overrides translated hint, configuration part of Sphinx-Togglebutton (https://sphinx-togglebutton.readthedocs.io/en/latest/use.html)
     togglebutton_open_on_print:   true               # Default value (line can be removed), opens all toggle-able content when you print, configuration part of Sphinx-Togglebutton (https://sphinx-togglebutton.readthedocs.io/en/latest/use.html)
     nb_execution_includepatterns: []                 # Default value (line can be removed), sets a a list of glob patterns to indicate notebooks that must be included for execution, configuration part of Sphinx-NB-Execution-Patterns (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-NB-Execution-Patterns/Manual/README.html)
     nb_execution_patterns_method: "only_include"     # Default value (line can be removed), sets the method used when both include and exclude patterns are provided, configuration part of Sphinx-NB-Execution-Patterns (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-NB-Execution-Patterns/Manual/README.html)
@@ -90,6 +90,7 @@ sphinx:                                              # Options passed on to the 
     #tippy_custom_tips                               # Default value not shown (line can be removed), creates custom tips, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
     tippy_enable_mathjax: true                       # Default value (line can be removed), enables tooltips for math equations, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
     #tippy_js                                        # Default value not shown (line can be removed), sets the Javascript required to enable tooltips, configuration part of TeachBooks-Sphinx-Tippy (https://teachbooks.io/manual/external/teachbooks-sphinx-tippy/README.html)
+
 
 teachbooks:
   attribution_location: top                          # Default value (line can be removed), sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
