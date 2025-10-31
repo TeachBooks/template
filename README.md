@@ -9,7 +9,6 @@ How to use the template is demonstrated in the figure below, all steps are elabo
 ![Demonstration for a public repository](https://github.com/TeachBooks/template_figures/blob/main/teachbooks-template.gif?raw=true)
 Video available [here](https://youtu.be/nN3Oi_MVvF0)
 
-
 1. To get started making your TeachBook with our functionalities, use the [template TeachBook](https://github.com/TeachBooks/main/template) as template:
 
 ![Use template](https://github.com/TeachBooks/template_figures/blob/main/use_template.png?raw=true)
@@ -24,7 +23,7 @@ Video available [here](https://youtu.be/nN3Oi_MVvF0)
 
 ![Activate GitHub Pages](https://github.com/TeachBooks/template_figures/blob/main/set_up_pages.png?raw=true)
 
-5. Make an edit to the TeachBook by editing and committing changes to one of the files in the `book/` subdirectory (available under `Code`).  Now checkout the progress of the publishing workflow under `Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. Remember, the first commit which is there has failed because GitHub Pages wasn't activated at the time of `Initial commit`, you could also re-run that job if you don't want to make an edit. You can do so by running the workflow from `Actions` - `All workflows` - `call-deploy-book` - `Initial commit` - `Re-run all jobs` - `Re-run jobs`:
+5. Now checkout the progress of the publishing workflow under `Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. The first commit which is there might have failed because GitHub Pages wasn't activated at the time of `Initial commit`. Re-run that job from `Actions` - `All workflows` - `call-deploy-book` - `Initial commit` - `Re-run all jobs` - `Re-run jobs`:
 
 ![Action](https://github.com/TeachBooks/template_figures/blob/main/action_re-run.jpeg?raw=true)
 
