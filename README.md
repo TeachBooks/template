@@ -5,15 +5,29 @@
 This page reuses CC BY 4.0 licensed content from {cite:t}`template`. {fa}`quote-left`{ref}`Find out more here.<external_resources>`
 ```
 
-```{admonition} User types
-:class: tip
+```{note}
+
+{bdg-light}`GitHub template`
+
+{bdg-link-secondary}`Uses TeachBooks package <../../features/teachbooks_intro.html>`
+
+{bdg-link-primary-line}`Includes TeachBooks Favourites <../../features/favourites.html>`
+
+{bdg-link-light}`Uses Deploy Book workflow <../deploy-book-workflow/README.html>`
+
+```
+
+```{tip}
 This page is useful for user type 3, 4 and 5.
 ```
 
-{bdg-light}`GitHub template`
-{bdg-link-secondary}`Uses TeachBooks package <../../features/teachbooks_intro.html>`
-{bdg-link-primary-line}`Includes TeachBooks Favourites <../../features/favourites.html>`
-{bdg-link-light}`Uses Deploy Book workflow <../deploy-book-workflow/README.html>`
+```{seealso}
+
+[{octicon}`mark-github` Repository](https://github.com/TeachBooks/template)
+
+[{octicon}`pencil` Exercise](https://github.com/TeachBooks/template/blob/main/README.md)
+
+```
 
 ```` 
 
