@@ -88,7 +88,7 @@ Set the repository website as your GitHub Pages website under {octicon}`code;1em
 ```
 
 ## Features
-- A github repository structure for making a [Jupyter Book](https://github.com/executablebooks/jupyter-book) (`/book`)
+- A github repository structure  (`/book`) for making a TeachBook: a [Jupyter Book v1](https://github.com/executablebooks/jupyter-book) for educational purposes
 - An empty TeachBook containing an intro page on root, an example markdown page, an example jupyter notebook page, an example references page. and an example credits page. (`/book/_toc.yml`, `/book/_config.yml`, `/book/credits.md`, `/book/intro.md`, `/book/references.md`, `/book/some_content/overview.md`, `/book/some_content/text_and_code.ipynb`)
 - A file ready for adding references (`references.bib`, `/book/references.md`)
 - An example favicon (web browser icon) (`/book/figures/favicon.ico`, `book/_config.yml`.)

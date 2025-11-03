@@ -1,5 +1,5 @@
 # first list the packages you wish to download from PyPI
-teachbooks # depends on jupyter-book
+teachbooks # depends on jupyter-book v1
 
 # Our favourite Sphinx extensions in one line, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
 git+https://github.com/TeachBooks/TeachBooks-Favourites
