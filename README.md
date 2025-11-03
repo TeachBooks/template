@@ -66,7 +66,7 @@ Demonstration for a public repository, video available [here](https://youtu.be/n
 :name: activate_pages
 ```
 
-5. Make an edit to the TeachBook by editing and committing changes to one of the files in the `book/` subdirectory (available under {octicon}`code;1em` `Code`).  Now checkout the progress of the publishing workflow under {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. Remember, the first commit which is there has failed because GitHub Pages wasn't activated at the time of `Initial commit`, you could also re-run that job if you don't want to make an edit. You can do so by running the workflow from {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit` - {octicon}`sync;1em` `Re-run all jobs` - `Re-run jobs`:
+5. Now checkout the progress of the publishing workflow under {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` -`<the most recent workflow run>`. Thee first commit which is there has failed because GitHub Pages wasn't activated at the time of `Initial commit`. Re-run that job from {octicon}`play;1em``Actions` - `All workflows` -  `call-deploy-book` - {octicon}`x-circle-fill;1em` `Initial commit` - {octicon}`sync;1em` `Re-run all jobs` - `Re-run jobs`:
 
 ```{figure} https://github.com/TeachBooks/template_figures/blob/main/action_re-run.jpeg?raw=true
 :name: action
