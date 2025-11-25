@@ -49,6 +49,9 @@ sphinx:                                              # Options passed on to the 
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       }
+      loader:
+        load:
+          - "ui/lazy"                                # Default value (lines can be removed), enables 'lazy' loading of mathjax element, speeding up load time of page, configuration part of Jupyterbook-patches (https://teachbooks.io/manual/external/JupyterBook-Patches/README.html)
     keep_warnings: false                             # Default value (line can be removed), disables showing warnings in the book, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-keep_warnings)
     external_toc_exclude_missing: true               # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents, configuration part of jupyterbook, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     external_toc_path: "_toc.yml"                    # Default value (line can be removed), sets path to the table of contents file, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
