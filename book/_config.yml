@@ -121,7 +121,6 @@ sphinx:                                              # Options passed on to the 
     sphinx_github_alerts_backquotes: 3               # Default value (line can be removed), sets the number of backticks used to start and end the admonitions, configuration part of Sphinx-GitHub-Alerts (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-GitHub-Alerts/main/README.html)
     sphinx_github_alerts_redirects: {}               # Default value (line can be removed), no redirects are set, configuration part of Sphinx-GitHub-Alerts (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-GitHub-Alerts/main/README.html)
 
-
 teachbooks:
   attribution_location: top                          # Default value (line can be removed), sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
   attribution_color: null                            # Default value (line can be removed), uses blue colour for attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
