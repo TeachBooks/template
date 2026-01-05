@@ -1,24 +1,6 @@
-# This config includes all the recommended (default) configuration options of the TeachBooks software, and a TeachBooks' selection of configuration options as provided by Jupyterbook v1 for Jupyterbook v1 software and Sphinx.
-
-author: TeachBooks Team, built with <a href="https://teachbooks.io">TeachBooks</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a>
-                                                     # Replace TeachBooks Teams with your own name in the line above, configuratin part of JupyterBook: https://jupyterbook.org/en/stable/customize/config.html
-execute:
-  execute_notebooks: "off"                           # Replace this if you want don't have notebooks with output and you want to add notebook output during build, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-  cache:             "_build/.jupyter_cache/"        # Default value (line can be removed), sets path to the jupyter cache that will be used to store execution artifacts, doesn't work in GitHub workflow, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-  exclude_patterns:  []                              # Default value (line can be removed), sets a list of patterns to *skip* in execution, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html), can overwritten by Sphinx-NB-Execution-Patterns (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-NB-Execution-Patterns/Manual/README.html)
-  timeout:           30                              # Default value (line can be removed), sets he maximum time (in seconds) each notebook cell is allowed to run, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-  run_in_temp:       false                           # Default value (line can be removed), disables a temporary directory was the command working directory (cwd), configuration part Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-  allow_errors:      false                           # Default value (line can be removed), all cells are always run, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-  stderr_output:     show                            # Default value (line can be removed), shows stderr output, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-
-html:
-  use_multitoc_numbering    : true                  # Default value (line can be removed), sets continuous numbering across parts/chapters, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html). Same functionality per section can be defined with sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
-  extra_footer              : ""                    # Default value (line can be removed), sets text to be displayed underneath the footer, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-
 sphinx:                                              # Options passed on to the underlying sphinx-parser
-  extra_extensions:                                  # Sets a list of extensions to load by sphinx, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
-    - teachbooks_favourites                          # Gives you a starter package of extensions to use in your book, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
-  local_extension: null                              # Sets a a list of local extensions to load by sphinx, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+  author: TeachBooks Team, built with <a href="https://teachbooks.io">TeachBooks</a>, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="license noopener noreferrer"">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt=""></a>
+                                                     # Replace TeachBooks Teams with your own name in the line above, configuratin part of JupyterBook: https://jupyterbook.org/en/stable/customize/config.html
   config:
     language: en                                     # Defines language (English) of everything except the content itself. For Dutch: replace with `nl`, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_js_files:
@@ -44,7 +26,11 @@ sphinx:                                              # Options passed on to the 
       announcement: ""                               # Default value (line can be removed), sets a banner announcement at the top of the site, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
     html_show_copyright:   false                     # As the copyright is included in the author field, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_last_updated_fmt: ''                        # Adds the date of the last update to the footer, if '' based on value of language, configuration part of shpinx-last-updated-by-git (https://github.com/TeachBooks/sphinx-last-updated-by-git)
+    extra_footer              : ""                   # Default value (line can be removed), sets text to be displayed underneath the footer, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+    bibtex_bibfiles: 
+      - references.bib                               # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_static_path: ["figures"]                    # Add folder that contain files that need to be included, such as the location of the logo(s), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+    use_multitoc_numbering    : true                 # Default value (line can be removed), sets continuous numbering across parts/chapters, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html). Same functionality per section can be defined with sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     mathjax3_config:
       chtml: {
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
@@ -53,6 +39,13 @@ sphinx:                                              # Options passed on to the 
         load:
           - "ui/lazy"                                # Default value (lines can be removed), enables 'lazy' loading of mathjax element, speeding up load time of page, configuration part of Jupyterbook-patches (https://teachbooks.io/manual/external/JupyterBook-Patches/README.html)
     keep_warnings: false                             # Default value (line can be removed), disables showing warnings in the book, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-keep_warnings)
+    nb_execution_mode: "off"                                      # Replace this if you want don't have notebooks with output and you want to add notebook output during build, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+    nb_execution_cache_path:      "_build/.jupyter_cache/"        # Default value (line can be removed), sets path to the jupyter cache that will be used to store execution artifacts, doesn't work in GitHub workflow, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+    nb_execution_excludepatterns: []                              # Default value (line can be removed), sets a list of patterns to *skip* in execution, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html), can overwritten by Sphinx-NB-Execution-Patterns (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-NB-Execution-Patterns/Manual/README.html)
+    nb_execution_timeout:         30                              # Default value (line can be removed), sets he maximum time (in seconds) each notebook cell is allowed to run, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+    nb_execution_in_temp:         false                           # Default value (line can be removed), disables a temporary directory was the command working directory (cwd), configuration part Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+    nb_execution_allow_errors:    false                           # Default value (line can be removed), all cells are always run, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+    nb_output_stderr:             show                            # Default value (line can be removed), shows stderr output, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
     external_toc_exclude_missing: true               # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents, configuration part of jupyterbook, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     external_toc_path: "_toc.yml"                    # Default value (line can be removed), sets path to the table of contents file, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     patch_config:
@@ -131,21 +124,18 @@ sphinx:                                              # Options passed on to the 
       suffix_end: end                                # Default value (line can be removed), suffix for the end directive, configuration part of Sphinx-GitHub-Alerts (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-Gated-Directives/main/MANUAL.html)
       suffix_separator: '-'                          # Default value (line can be removed), separator between the original directive name and the suffix, configuration part of Sphinx-GitHub-Alerts (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-Gated-Directives/main/MANUAL.html)
       override_existing: false                       # Default value (line can be removed), whether to override existing gated directives with the same name, configuration part of Sphinx-GitHub-Alerts (https://teachbooks.io/manual/_git/github.com_TeachBooks_Sphinx-Gated-Directives/main/MANUAL.html)
+    myst_enable_extensions:                            # Default values (lines can be removed), sets extensions to enable in the myst parser, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
+      - colon_fence
+      - dollarmath
+      - linkify
+      - substitution
+      - tasklist
+    myst_url_schemes: [mailto, http, https]            # Default value (lines can be removed), sets URI schemes that will be recognised as external URLs in Markdown links, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
+    myst_dmath_double_inline: true                     # Default value (lines can be removed), allows display math ($$) within an inline context, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
+  extra_extensions:                                  # Sets a list of extensions to load by sphinx, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
+    - teachbooks_favourites                          # Gives you a starter package of extensions to use in your book, replace with individual extensions if you prefer some extensions not to be included (https://github.com/TeachBooks/TeachBooks-Favourites)
+  local_extension: null                              # Sets a a list of local extensions to load by sphinx, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
 
 teachbooks:
   attribution_location: top                          # Default value (line can be removed), sets location of attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
   attribution_color: null                            # Default value (line can be removed), uses blue colour for attribution admonition of external pages, configuration part of TeachBooks package (https://teachbooks.io/manual/features/external_toc.html)
-
-bibtex_bibfiles: 
-  - references.bib                                   # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
-
-# Parse and render settings
-parse:
-  myst_enable_extensions:                            # Default values (lines can be removed), sets extensions to enable in the myst parser, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
-    - colon_fence
-    - dollarmath
-    - linkify
-    - substitution
-    - tasklist
-  myst_url_schemes: [mailto, http, https]            # Default value (lines can be removed), sets URI schemes that will be recognised as external URLs in Markdown links, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
-  myst_dmath_double_inline: true                     # Default value (lines can be removed), allows display math ($$) within an inline context, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
