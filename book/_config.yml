@@ -26,8 +26,8 @@ sphinx:                                              # Options passed on to the 
       announcement: ""                               # Default value (line can be removed), sets a banner announcement at the top of the site, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
     html_show_copyright:   false                     # As the copyright is included in the author field, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_last_updated_fmt: ''                        # Adds the date of the last update to the footer, if '' based on value of language, configuration part of shpinx-last-updated-by-git (https://github.com/TeachBooks/sphinx-last-updated-by-git)
-    extra_footer              : ""                   # Default value (line can be removed), sets text to be displayed underneath the footer, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
-    bibtex_bibfiles: 
+    extra_footer : ''                                # Default value (line can be removed), sets text to be displayed underneath the footer, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html)
+    bibtex_bibfiles:
       - references.bib                               # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_static_path: ["figures"]                    # Add folder that contain files that need to be included, such as the location of the logo(s), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     use_multitoc_numbering    : true                 # Default value (line can be removed), sets continuous numbering across parts/chapters, configuration part of Jupyterbook v1 (https://jupyterbook.org/en/stable/customize/config.html). Same functionality per section can be defined with sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
