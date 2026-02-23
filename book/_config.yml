@@ -101,6 +101,11 @@ sphinx:                                              # Options passed on to the 
     nb_scroll_outputs: false                         # Default value (line can be removed), make long cell outputs not scrollable, configuration part of Myst-NB (https://myst-nb.readthedocs.io/en/latest/configuration.html)
     nb_remove_code_source: false                     # Default value (line can be removed), do not remove code cell source, configuration part of Myst-NB (https://myst-nb.readthedocs.io/en/latest/configuration.html)
     nb_remove_code_outputs: false                    # Default value (line can be removed), do not remove code cell outputs, configuration part of Myst-NB (https://myst-nb.readthedocs.io/en/latest/configuration.html)
+    zoomies_selector: ".bd-article img"              # Default value (line can be removed), sets images that should be zoomable, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
+    zoomies_best_fit: 70                             # Default value (line can be removed), sets initial zoom level in the zomoable view, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
+    zoomies_toolbar: ["zoomIn", "zoomOut", "oneToOne", "reset"] # Default value (line can be removed), tools to show in the zoomable view, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
+    zoomies_invert_colors: false                     # Default value (line can be removed), disables inversion of colours in the zoomable view as this functionality is provided by Shpinx-Image-Inverter, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
+    zoomies_bg_apply_to_img: true                    # Default value (line can be removed), adds a background/padding directly to the image in the zoomable view., configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
 
 
 teachbooks:
