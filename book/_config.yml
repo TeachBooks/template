@@ -106,6 +106,7 @@ sphinx:                                              # Options passed on to the 
     zoomies_toolbar: ["zoomIn", "zoomOut", "oneToOne", "reset"] # Default value (line can be removed), tools to show in the zoomable view, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
     zoomies_invert_colors: false                     # Default value (line can be removed), disables inversion of colours in the zoomable view as this functionality is provided by Shpinx-Image-Inverter, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
     zoomies_bg_apply_to_img: true                    # Default value (line can be removed), adds a background/padding directly to the image in the zoomable view., configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
+    todo_include_todos: true                         # Enables to dos in documentation, configuration part of sphinx.ext.todo (https://www.sphinx-doc.org/en/master/usage/extensions/todo.html)
 
 
 teachbooks:
