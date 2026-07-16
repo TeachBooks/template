@@ -24,6 +24,7 @@ sphinx:                                              # Options passed on to the 
     html_favicon: "figures/TB_favicon.ico"           # Replace this with your own favicon, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_baseurl:  "https://<user/org>.io/<repo>"    # Replace this with your own URL, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
     html_theme_options:
+      home_page_in_toc: true                         # Replace with false it you don't want the landing page to be shown in the table of contents.
       logo:
         text:        Template                        # Replace this with your own book title, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
         image_light: TeachBooks_logo.svg             # Put your logo for the light mode here (can be the same as image_dark), configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
