@@ -109,6 +109,39 @@ sphinx:                                              # Options passed on to the 
     zoomies_invert_colors: false                     # Default value (line can be removed), disables inversion of colours in the zoomable view as this functionality is provided by Shpinx-Image-Inverter, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
     zoomies_bg_apply_to_img: true                    # Default value (line can be removed), adds a background/padding directly to the image in the zoomable view., configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
     todo_include_todos: true                         # Enables to dos in documentation, configuration part of sphinx.ext.todo (https://www.sphinx-doc.org/en/master/usage/extensions/todo.html)
+    teachbooks_questions:                            # Default values (lines can be removed), sets default feedback and number of columns for interactive questions, configuration part of TeachBooks-Questions (https://github.com/TeachBooks/TeachBooks-Questions)
+      feedbacks:
+        multiple-choice:
+          single-select:
+            true: ["Correct!"]
+            false: ["Incorrect."]
+          multiple-select:
+            true: ["Correct!"]
+            false: ["Incorrect."]
+            correct: ["Well done!"]
+            incorrect : ["Try again! You selected at least one incorrect option."]
+            missed: ["Try again! You missed at least one correct option."]
+            incorrect-missed: ["Try again! You selected at least one incorrect option and missed at least one correct option."]
+        short-answer:
+          blocks:
+            true: ["Correct!"]
+            false: ["Incorrect."]
+          gaps:
+            true: ["Correct!"]
+            false: ["Incorrect."]
+            correct: ["You filled in all gaps correctly."]
+            incorrect: ["You filled in none of the gaps correctly."]
+            mixed: ["You filled in some gaps correctly, but also some incorrectly."]
+            show-answer: ["The correct answers are shown above."]
+      columns:
+        multiple-choice:
+          single-select: "1 1 2 2"
+          multiple-select: "1 1 2 2"
+        short-answer:
+          blocks: "1 1 1 1"
+          gaps: "1 1 1 1"
+        no-input:
+          no-submit: "1 1 1 1"
 
 
 teachbooks:
@@ -132,3 +165,4 @@ parse:
   myst_substitutions: {}                             # Default value (lines can be removed), sets no substitutions, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
   myst_dmath_double_inline: true                     # Parse inline `$$ ... $$`, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
   myst_enable_checkboxes: false                      # Default value (lines can be removed), disables checkboxes, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
+  myst_linkify_fuzzy_links: false                    # Disables automatic hyperlink creation for fuzzy links without schemes like https:// , configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
