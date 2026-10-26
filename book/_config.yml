@@ -63,7 +63,6 @@ sphinx:                                              # Options passed on to the 
       - smartquotes
       - strikethrough
       - replacements
-    myst_heading_anchors: 3                          # Generates slugs for headings up to level 3, so links like [](#heading-slug) and [](page.md#heading-slug) resolve, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html#auto-generated-header-anchors).
     myst_url_schemes: [mailto, http, https]          # Default value (lines can be removed), sets URI schemes that will be recognised as external URLs in Markdown links, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
     myst_links_external_new_tab: true                # Opens all eternal links in a new tab, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html)
     myst_number_code_blocks: []                      # Default value (lines can be removed), add line numbers to code blocks with these languages, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html)
