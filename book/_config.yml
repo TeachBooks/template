@@ -47,6 +47,30 @@ sphinx:                                              # Options passed on to the 
         mtextInheritFont: true                       # To typeset text within math prettier, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
       }
     keep_warnings: false                             # Default value (line can be removed), disables showing warnings in the book, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-keep_warnings)
+    nitpicky: true                                   # Enables warnings for all references where the target cannot be found, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-nitpicky)
+    myst_enable_extensions:                          # Default values (lines can be removed), sets extensions to enable in the myst parser, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
+      - amsmath
+      - attrs_block
+      - attrs_inline
+      - colon_fence
+      - deflist
+      - dollarmath
+      - fieldlist
+      - html_image
+      - linkify
+      - substitution
+      - tasklist
+      - smartquotes
+      - strikethrough
+      - replacements
+    myst_heading_anchors: 3                          # Generates slugs for headings up to level 3, so links like [](#heading-slug) and [](page.md#heading-slug) resolve, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html#auto-generated-header-anchors).
+    myst_url_schemes: [mailto, http, https]          # Default value (lines can be removed), sets URI schemes that will be recognised as external URLs in Markdown links, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
+    myst_links_external_new_tab: true                # Opens all eternal links in a new tab, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html)
+    myst_number_code_blocks: []                      # Default value (lines can be removed), add line numbers to code blocks with these languages, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html)
+    myst_substitutions: {}                           # Default value (lines can be removed), sets no substitutions, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
+    myst_dmath_double_inline: true                   # Parse inline `$$ ... $$`, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
+    myst_enable_checkboxes: false                    # Default value (lines can be removed), disables checkboxes, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
+    myst_linkify_fuzzy_links: false                  # Disables automatic hyperlink creation for fuzzy links without schemes like https:// , configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.htmlhtml#confval-nitpicky)
     external_toc_exclude_missing: true               # Replace this with false if you want to build all files in the book, allowing you to refer to pages which are not included in the table of contents, configuration part of jupyterbook, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     external_toc_path: "_toc.yml"                    # Default value (line can be removed), sets path to the table of contents file, configuration part of sphinx-external-toc (https://sphinx-external-toc.readthedocs.io/en/latest/intro.html)
     inverter_all:        true                        # Default value (line can be removed), inverts all figures, configuration part of Sphinx-Image-Inverter (https://teachbooks.io/manual/external/Sphinx-Image-Inverter/README.html)
@@ -150,22 +174,3 @@ teachbooks:
 
 bibtex_bibfiles: 
   - references.bib                                   # Required for references, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/index.html)
-
-# Parse and render settings
-parse:
-  myst_enable_extensions:                            # Default values (lines can be removed), sets extensions to enable in the myst parser, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
-    - colon_fence
-    - dollarmath
-    - linkify
-    - substitution
-    - tasklist
-    - smartquotes
-    - strikethrough
-    - replacements
-  myst_url_schemes: [mailto, http, https]            # Default value (lines can be removed), sets URI schemes that will be recognised as external URLs in Markdown links, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
-  myst_links_external_new_tab: true                  # Opens all eternal links in a new tab, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html)
-  myst_number_code_blocks: []                        # Default value (lines can be removed), add line numbers to code blocks with these languages, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/configuration.html)
-  myst_substitutions: {}                             # Default value (lines can be removed), sets no substitutions, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
-  myst_dmath_double_inline: true                     # Parse inline `$$ ... $$`, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
-  myst_enable_checkboxes: false                      # Default value (lines can be removed), disables checkboxes, configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
-  myst_linkify_fuzzy_links: false                    # Disables automatic hyperlink creation for fuzzy links without schemes like https:// , configuration part of https://myst-parser.readthedocs.io/en/latest/configuration.html
