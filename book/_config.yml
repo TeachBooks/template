@@ -49,7 +49,6 @@ sphinx:                                              # Options passed on to the 
     keep_warnings: false                             # Default value (line can be removed), disables showing warnings in the book, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-keep_warnings)
     nitpicky: true                                   # Enables warnings for all references where the target cannot be found, configuration part of Sphinx (https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-nitpicky)
     myst_enable_extensions:                          # Default values (lines can be removed), sets extensions to enable in the myst parser, configuration part of MyST parser (https://myst-parser.readthedocs.io/en/latest/syntax/optional.html)
-      - amsmath
       - attrs_block
       - attrs_inline
       - colon_fence
