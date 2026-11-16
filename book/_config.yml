@@ -131,6 +131,7 @@ sphinx:                                              # Options passed on to the 
     zoomies_invert_colors: false                     # Default value (line can be removed), disables inversion of colours in the zoomable view as this functionality is provided by Shpinx-Image-Inverter, configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
     zoomies_bg_apply_to_img: true                    # Default value (line can be removed), adds a background/padding directly to the image in the zoomable view., configuration part of TeachBooks-Zoomies (https://github.com/TeachBooks/TeachBooks-Zoomies)
     todo_include_todos: true                         # Enables to dos in documentation, configuration part of sphinx.ext.todo (https://www.sphinx-doc.org/en/master/usage/extensions/todo.html)
+    sd_card_legacy_separators: false                 # Disables deprecated cards, configuration part of Sphinx Design (https://sphinx-design.readthedocs.io/en/latest/cards.html#legacy-separator-syntax)
     teachbooks_questions:                            # Default values (lines can be removed), sets default feedback and number of columns for interactive questions, configuration part of TeachBooks-Questions (https://github.com/TeachBooks/TeachBooks-Questions)
       feedbacks:
         multiple-choice:
